@@ -1,0 +1,25 @@
+@import 'src/assets/stylesheets/variables.scss';
+
+.ant-pagination {
+  >li {
+    border: none;
+
+    >a {
+      font-size: 14px;
+    }
+
+    >.ant-pagination-item-link {
+      border: none;
+    }
+
+    &.ant-pagination-item-active {
+      color: $white !important;
+      border-radius: 4px;
+      background-color: $butterfly-blue !important;
+
+      >a {
+        color: $white !important;
+      }
+    }
+  }
+}

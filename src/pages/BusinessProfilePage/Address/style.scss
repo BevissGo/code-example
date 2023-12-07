@@ -1,0 +1,17 @@
+.business-profile-address {
+  display: flex;
+  flex-direction: row;
+
+  &__item {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+
+    font-weight: 400;
+    font-size: 18px;
+  }
+
+  li:nth-child(n + 2) {
+    margin-top: 10px;
+  }
+}

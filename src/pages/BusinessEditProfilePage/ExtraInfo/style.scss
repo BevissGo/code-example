@@ -1,0 +1,86 @@
+.business-edit-profile-page-extra-info {
+  position: relative;
+  padding-right: 20px;
+
+  &__address {
+    margin-top: 20px;
+
+    &-text {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 20px;
+
+      color: #555555;
+    }
+
+    &-input {
+      border: none;
+      color: black;
+
+      height: 44px;
+
+      background: white;
+      border-radius: 30px;
+    }
+
+    &-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      height: 44px;
+    }
+
+    &-button {
+      background: #dadada;
+      border: 1px solid #dadada;
+      border-radius: 20px;
+
+      color: #555555;
+    }
+  }
+
+  &__services {
+    margin-top: 20px;
+
+    &-text {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 20px;
+
+      color: #555555;
+    }
+
+    &-select {
+      padding: 5px 15px;
+
+      font-size: medium;
+      font-weight: 400;
+
+      background: white;
+      border-radius: 30px;
+    }
+  }
+
+  &__keyskills {
+    margin-top: 20px;
+
+    &-text {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 20px;
+
+      color: #555555;
+    }
+
+    &-select {
+      padding: 5px 15px;
+
+      font-size: medium;
+      font-weight: 400;
+
+      background: white;
+      border-radius: 30px;
+    }
+  }
+}

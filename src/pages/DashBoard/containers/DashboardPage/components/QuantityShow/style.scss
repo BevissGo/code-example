@@ -1,0 +1,91 @@
+@import 'src/assets/stylesheets/mixins.scss';
+@import 'src/assets/stylesheets/variables.scss';
+
+.quantity-show {
+  display: flex;
+  flex-direction: column;
+
+  margin: 12px 10px 24px;
+  padding: 16px 20px 4px;
+
+  width: 25%;
+  transition: width 1s;
+
+  border-radius: 10px;
+
+  position: relative;
+
+  &-extended {
+    display: flex;
+    flex-direction: column;
+
+    margin: 12px 10px 24px;
+    padding: 16px 20px 4px;
+
+    width: 50%;
+    transition: width 0.5s;
+
+    border-radius: 10px;
+
+    position: relative;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    @include text(Montserrat-Regular, 0.875rem, $black, null);
+  }
+
+  &__extend-text {
+    @include text(Montserrat-Bold, 0.625rem, $black, 0.625rem);
+    padding: 4px;
+    cursor: pointer;
+    z-index: 2;
+
+    .anticon {
+      width: auto !important;
+      height: auto !important;
+    }
+  }
+
+  &__quantity {
+    @include text(Montserrat-Regular, 3rem, $black, null);
+    font-weight: 600;
+    margin-top: 16px;
+    margin-bottom: 40px;
+  }
+
+  &__chart {
+    position: absolute;
+    top: 0;
+    right: 12px;
+    bottom: 0;
+    left: 30%;
+
+    z-index: 1;
+
+    &-empty {
+      position: absolute;
+      top: 20%;
+      right: 20%;
+    }
+  }
+
+  &__changeRate {
+    z-index: 1;
+
+    &__percentage {
+      @include text(Montserrat-Regular, 1.25rem, $black, null);
+    }
+
+    &__time {
+      @include text(Montserrat-Regular, 0.625rem, $black, null);
+      margin-left: 12px;
+    }
+  }
+}

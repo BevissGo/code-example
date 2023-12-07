@@ -1,0 +1,53 @@
+@import 'src/assets/stylesheets/variables.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+
+.survey-detail-modal {
+  &__body {
+    padding: 20px 16px;
+    height: 60vh;
+    overflow: auto;
+    background-color: $white;
+  }
+
+  &__question {
+    @include text(Montserrat-Bold, 1rem, #000, null);
+    margin: 8px 0;
+
+    &-group {
+      padding-bottom: 32px;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid #eff0f4;
+      }
+
+      &:not(:first-child) {
+        margin-top: 32px;
+      }
+    }
+
+    &-index {
+      @include text(Montserrat-Regular, 0.875rem, #363636, null);
+      font-weight: 600;
+    }
+  }
+
+  &__type {
+    &-title {
+      @include text(Montserrat-Bold, 0.875rem, #000, null);
+    }
+
+    &-content {
+      @include text(Montserrat-Regular, 0.875rem, #000, null);
+    }
+  }
+
+  &__format {
+    &-title {
+      @include text(Montserrat-Bold, 0.875rem, #000, null);
+    }
+
+    &-content {
+      @include text(Montserrat-Regular, 0.875rem, #000, null);
+    }
+  }
+}

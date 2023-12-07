@@ -1,0 +1,28 @@
+@import 'src/assets/stylesheets/variables.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+
+.custom-search {
+
+  & .ant-input {
+    color: black;
+    
+    &-suffix {
+      position: relative;
+      top: 3px;
+    }
+
+    &-affix-wrapper {
+      padding: 10px;
+    }
+
+    &-search-button {
+      padding: 22px 10px !important;
+    }
+  }
+
+  & .anticon.anticon-search {
+    position: relative;
+    bottom: 10px !important;
+  }
+}
+

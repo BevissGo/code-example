@@ -1,0 +1,161 @@
+@import 'src/assets/stylesheets/common.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+@import 'src/assets/stylesheets/global.scss';
+@import 'src/assets/stylesheets/variables.scss';
+
+.footer-page-v2 {
+  z-index: 1;
+  position: relative;
+
+  &__background {
+    background: $night-rider;
+    @include flex(row, center, center);
+  }
+
+  &__container {
+    width: 100%;
+    max-width: 1252px;
+    @include flex(row, null, space-between);
+    flex-wrap: wrap;
+
+    @include multiple-responsive(small-mobile, mobile) {
+      padding: 24px 17px;
+    }
+
+    @include multiple-responsive(small-tablet, tablet) {
+      padding: 32px 17px;
+    }
+
+    @include multiple-responsive(small-desktop) {
+      padding: 40px 17px;
+    }
+
+    @include multiple-responsive(medium-desktop) {
+      padding: 48px 0;
+    }
+  }
+
+  &__logo {
+    @include multiple-responsive(small-mobile, mobile, small-tablet, tablet) {
+      width: 100%;
+    }
+
+    @include multiple-responsive(small-desktop) {
+      width: 30%;
+    }
+
+    @include multiple-responsive(medium-desktop) {
+      width: 37%;
+    }
+
+    &-img {
+      @include square(90px, null);
+    }
+
+    &-text {
+      @include text(Montserrat-Bold, 16px, $floral-white-fa, 24px);
+      margin-top: 10px;
+
+      @include multiple-responsive(small-mobile, mobile, small-tablet, tablet) {
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  &__copyright {
+    height: 56px;
+    background-color: $white;
+    @include flex(row, center, center);
+
+    &__text {
+      @include text(Montserrat-Regular, 16px, $black, null);
+      font-weight: 600;
+    }
+  }
+
+  &__main {
+    @include flex(row, null, space-between);
+    flex-wrap: wrap;
+
+
+    @include multiple-responsive(small-mobile, mobile, small-tablet, tablet) {
+      width: 100%;
+    }
+
+    @include multiple-responsive(small-desktop) {
+      width: 70%;
+    }
+
+    @include multiple-responsive(medium-desktop) {
+      width: 63%;
+    }
+  }
+
+  &__navs {
+    width: 40%;
+    padding-right: 80px;
+
+    @include multiple-responsive(small-mobile, mobile) {
+      width: 100%;
+      margin-bottom: 24px;
+    }
+
+    @include multiple-responsive(small-tablet, tablet) {
+      width: 50%;
+    }
+
+    ul {
+      @include table();
+
+      li {
+        padding: 12px 0;
+
+        a {
+          text-decoration: none;
+          @include text(Montserrat-Regular, 16px, $floral-white-fa, 24px);
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  &__company-info {
+    width: 55%;
+
+    @include multiple-responsive(small-mobile, mobile) {
+      width: 100%;
+    }
+
+    @include multiple-responsive(small-tablet, tablet) {
+      width: 50%;
+    }
+
+    &__name {
+      @include text(Montserrat-Bold, 16px, $floral-white-fa, 24px);
+      padding: 12px 0;
+    }
+
+    ul {
+      @include table();
+
+      li {
+        padding: 12px 0;
+
+        p {
+          @include text(Montserrat-Regular, 16px, $floral-white-fa, 24px);
+        }
+      }
+    }
+  }
+
+  &__socials {
+    &__fb-img {
+      @include square(28px, null);
+      margin-right: 20px;
+    }
+
+    &__linkedin-img {
+      @include square(26px, null);
+    }
+  }
+}

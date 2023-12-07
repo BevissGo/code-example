@@ -1,0 +1,71 @@
+@import 'src/assets/stylesheets/variables.scss';
+@import 'src/assets/stylesheets/common.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+
+.custom-test-modal-instructor {
+  position: relative;
+  background: $white;
+  max-width: 770px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: fit-content;
+  margin: auto;
+  border-radius: 0.9375rem;
+  @include multiple-responsive(small-mobile, mobile) {
+    margin-left: 0.9375rem;
+    margin-right: 0.9375rem;
+    margin-top: 80px;
+  }
+  @include multiple-responsive(small-tablet, tablet) {
+    margin-left: 38px;
+    margin-right: 38px;
+    max-width: 100%;
+    margin-top: 8rem;
+  }
+  @include responsive(small-desktop) {
+    margin-top: 10rem;
+  }
+
+  &__header {
+    @include text(Georgia-Bold, 2.5rem, $charcoal, null);
+    padding: 3.125rem 3.125rem 1.25rem;
+    @include multiple-responsive(small-mobile, mobile) {
+      padding: 1.25rem 1.25rem 0.625rem;
+      font-size: 1.75rem;
+    }
+  }
+  &__body {
+    @include text(ProximaNova-Regular, 1.125rem, $charcoal, 1.5625rem);
+    padding-left: 3.125rem;
+    padding-right: 3.125rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid $whisper;
+    @include multiple-responsive(small-mobile, mobile) {
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+      padding-bottom: 1.25rem;
+    }
+
+    &__exam_structure {
+      @include text(ProximaNova-Bold, 1.125rem, $charcoal, null);
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      padding-left: 28px;
+    }
+  }
+  &__footer {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    margin: auto;
+    @include flex(null, null, center);
+    @include multiple-responsive(small-mobile, mobile) {
+      padding-bottom: 1.25rem;
+      padding-top: 1.25rem;
+    }
+  }
+}

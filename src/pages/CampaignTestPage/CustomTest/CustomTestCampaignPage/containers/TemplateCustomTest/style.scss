@@ -1,0 +1,68 @@
+@import 'src/assets/stylesheets/variables.scss';
+@import 'src/assets/stylesheets/common.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+
+.template-custom-test {
+  max-width: 800px;
+  height: fit-content;
+  position: relative;
+  background: $white;
+  border-top-left-radius: 0.9375rem;
+  border-top-right-radius: 0.9375rem;
+  margin: 154px auto auto;
+  @include multiple-responsive(small-mobile, mobile) {
+    margin: 5rem 0.9375rem 8px 0.9375rem;
+  }
+  @include multiple-responsive(small-tablet, tablet) {
+    margin-top: 8rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+
+  &__header {
+    padding: 40px 40px 20px;
+    border-bottom: 1px solid $whisper;
+    @include multiple-responsive(small-mobile, mobile) {
+      padding: 20px;
+    }
+    &__top {
+      margin-bottom: 0.875rem;
+      @include multiple-responsive(small-mobile, mobile) {
+        flex-direction: column;
+      }
+    }
+    &__title {
+      @include text(Merriweather-Bold, 1.5rem, $charcoal, 1.875rem);
+      text-transform: uppercase;
+      @include multiple-responsive(small-mobile, mobile) {
+        font-size: 1.125rem;
+      }
+    }
+    &__clock {
+      display: flex;
+      align-items: center;
+    }
+    &__subscription {
+      @include text(ProximaNova-Regular, 0.875rem, $charcoal, 20px);
+    }
+  }
+  &__body {
+    &__custom-question {
+      padding: 20px 40px;
+      border-bottom: 1px solid $whisper;
+      @include multiple-responsive(small-mobile, mobile) {
+        padding: 20px;
+      }
+    }
+    &__question:last-child {
+      border-bottom: none;
+    }
+  }
+  &__footer {
+    border-top: 1px solid $whisper;
+    padding: 40px 48px 40px 40px;
+    @include multiple-responsive(small-mobile, mobile) {
+      padding: 20px;
+    }
+  }
+}

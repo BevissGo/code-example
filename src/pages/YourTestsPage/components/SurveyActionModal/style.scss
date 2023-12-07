@@ -1,0 +1,17 @@
+@import 'src/assets/stylesheets/variables.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+
+.survey-action-modal {
+  padding: 96px 0;
+
+  &__create-survey-btn {
+    @include text(Montserrat-Bold, 0.875rem, $white, null);
+
+    width: 100%;
+    height: 100%;
+    padding: 10px 0;
+
+    border-radius: 10px;
+    background-color: $dark-cerulean;
+  }
+}

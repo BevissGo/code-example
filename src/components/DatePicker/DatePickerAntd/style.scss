@@ -1,0 +1,34 @@
+.ant-picker {
+  width: 100%;
+  color: rgba(0, 0, 0, .65) !important;
+  font-size: 14px !important;
+  font-variant: tabular-nums !important;
+  line-height: 1.5715 !important;
+  list-style: none !important;
+  font-feature-settings: "tnum", "tnum" !important;
+}
+
+.ant-picker-input {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+
+  input {
+    position: relative !important;
+    display: inline-block !important;
+    width: 100% !important;
+    color: #000 !important;
+    font-size: 14px !important;
+    line-height: 1.5715 !important;
+    padding: 4px 11px !important;
+    border-radius: 4px !important;
+    transition: all .3s !important;
+    flex: auto !important;
+    min-width: 1px !important;
+    height: auto !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+  }
+}

@@ -1,0 +1,40 @@
+@import 'src/assets/stylesheets/variables.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+
+.custom-checkbox {
+  @include text(Montserrat-Regular, 0.875rem, $black, null);
+
+  &--checked {
+    @include text(Montserrat-Regular, 0.875rem, $black, null);
+    font-weight: 600;
+
+    .ant-checkbox-checked {
+      .ant-checkbox-inner {
+        background-color: black;
+        border: transparent;
+        width: 24px;
+        height: 24px;
+
+        &::after {
+          inset-inline-start: 30%;
+        }
+      }
+    }
+
+    .ant-checkbox-disabled {
+      .ant-checkbox-inner {
+        &::after {
+          border-color: $white;
+        }
+      }
+    }
+  }
+
+  .ant-checkbox-inner {
+    width: 24px;
+    height: 24px;
+
+    background-color: $grey-6;
+    border: transparent;
+  }
+}

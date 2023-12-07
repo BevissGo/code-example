@@ -1,0 +1,48 @@
+@import 'src/assets/stylesheets/common.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+@import 'src/assets/stylesheets/variables.scss';
+
+.check-email-modal {
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  align-items: center;
+  @include flex(null, null, center);
+
+  &__background {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 4;
+    margin: 0 auto;
+    min-height: 100vh;
+    position: absolute;
+    background-color: $black-opacity-45;
+  }
+  &__body {
+    width: 524px;
+    display: flex;
+    padding-top: 50px;
+    background: #fff;
+    align-items: center;
+    padding-bottom: 15px;
+    border-radius: 1.25rem;
+    flex-direction: column;
+
+    div {
+      p {
+        @include text(ProximaNova-Regular, 1.125rem, $charcoal, null);
+        text-align: center;
+      }
+      padding-bottom: 25px;
+    }
+    @include multiple-responsive(mobile, small-mobile) {
+      margin: 15px;
+      padding: 30px;
+    }
+  }
+}

@@ -1,0 +1,215 @@
+@import 'src/assets/stylesheets/variables.scss';
+@import 'src/assets/stylesheets/common.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+
+.analyzing-character {
+  position: relative;
+  background-color: $white-smoke;
+  @include multiple-responsive(small-mobile, mobile) {
+    padding: 30px 15px 10px;
+  }
+  @include multiple-responsive(small-tablet, tablet) {
+    padding: 40px 38px 10px;
+  }
+  @include responsive(small-desktop) {
+    padding: 40px 56px 10px;
+  }
+  @include responsive(medium-desktop) {
+    padding: 50px 86px;
+  }
+  @include responsive(medium-middle-desktop) {
+    padding: 80px 135px;
+  }
+  &__overview {
+    &__title {
+      @include text(ProximaNova-Bold, 22px, $charcoal, null);
+      padding-bottom: 20px;
+    }
+    &__description {
+      padding-bottom: 30px;
+      @include text(ProximaNova-Regular, 18px, $charcoal, 30px);
+      width: calc(50% - 15px);
+      @include multiple-responsive(small-mobile, mobile, small-tablet) {
+        padding-bottom: 20px;
+        width: 100%;
+      }
+    }
+    &__list-description {
+      @include flex(null, null, space-between);
+      flex-wrap: wrap;
+    }
+  }
+  .line-break {
+    height: 1px;
+    background: $silver;
+
+    @include multiple-responsive(small-mobile, mobile) {
+      margin-top: 10px;
+      margin-bottom: 30px;
+    }
+    @include multiple-responsive(small-tablet, tablet) {
+      margin-top: 10px;
+      margin-bottom: 40px;
+    }
+    @include responsive(small-desktop) {
+      margin-top: 10px;
+      margin-bottom: 40px;
+    }
+    @include responsive(medium-desktop) {
+      margin-top: 20px;
+      margin-bottom: 50px;
+    }
+    @include responsive(medium-middle-desktop) {
+      margin-top: 50px;
+      margin-bottom: 80px;
+    }
+  }
+  &__summary {
+    &__intro {
+      padding-bottom: 50px;
+      width: calc(50% - 15px);
+      @include multiple-responsive(small-mobile, mobile, small-tablet) {
+        padding-bottom: 20px;
+        width: 100%;
+      }
+      &__title {
+        @include text(ProximaNova-Bold, 22px, $charcoal, null);
+        padding-bottom: 20px;
+      }
+      &__description {
+        @include text(ProximaNova-Regular, 18px, $charcoal, 30px);
+      }
+    }
+    &__pros-and-cons {
+      @include flex(null, null, space-between);
+      flex-wrap: wrap;
+      &--pros {
+        width: calc(50% - 15px);
+        height: fit-content;
+        padding-bottom: 30px;
+        @include multiple-responsive(small-mobile, mobile, small-tablet) {
+          padding-bottom: 20px;
+          width: 100%;
+        }
+        @include flex(null, null, flex-end);
+        &__background {
+          max-width: 470px;
+          background: $white;
+          @include multiple-responsive(small-mobile, mobile, small-tablet) {
+            max-width: 100%;
+          }
+        }
+        &__title {
+          padding: 16px 30px;
+          border-bottom: 1px solid $whisper-2;
+          @include text(ProximaNova-Bold, 22px, $dodger-blue, null);
+        }
+        &__list-pros {
+          @include table();
+          li {
+            padding: 20px 30px;
+            border-bottom: 1px solid $whisper-2;
+            span {
+              @include text(ProximaNova-Regular, 18px, $charcoal, 30px);
+            }
+            &:nth-child(even) {
+              background: $ghost-white-2;
+            }
+
+            &:last-child {
+              border: 0;
+            }
+          }
+        }
+      }
+      &--cons {
+        width: calc(50% - 15px);
+        height: fit-content;
+        padding-bottom: 30px;
+        @include multiple-responsive(small-mobile, mobile, small-tablet) {
+          padding-bottom: 20px;
+          width: 100%;
+        }
+        &__background {
+          max-width: 470px;
+          background: $white;
+          @include multiple-responsive(small-mobile, mobile, small-tablet) {
+            max-width: 100%;
+          }
+        }
+        &__title {
+          @include text(ProximaNova-Bold, 22px, $valencia, null);
+          padding: 16px 30px;
+          border-bottom: 1px solid $whisper-2;
+        }
+        &__list-pros {
+          @include table();
+          li {
+            padding: 20px 30px;
+            border-bottom: 1px solid $whisper-2;
+            span {
+              @include text(ProximaNova-Regular, 18px, $charcoal, 30px);
+            }
+            &:nth-child(even) {
+              background: $ghost-white-2;
+            }
+
+            &:last-child {
+              border: 0;
+            }
+          }
+        }
+      }
+    }
+    &__list-example {
+      @include flex(null, null, space-between);
+      flex-wrap: wrap;
+      &__background {
+        width: calc(50% - 15px);
+        &.left {
+          @include flex(null, null, flex-end);
+        }
+        @include multiple-responsive(small-mobile, mobile) {
+          padding-bottom: 30px;
+        }
+        @include multiple-responsive(small-tablet, tablet, small-desktop) {
+          padding-bottom: 40px;
+        }
+        @include multiple-responsive(small-mobile, mobile, small-tablet) {
+          width: 100%;
+        }
+        @include responsive(medium-desktop) {
+          padding-bottom: 50px;
+        }
+        @include responsive(medium-middle-desktop) {
+          padding-bottom: 80px;
+        }
+      }
+    }
+  }
+  &__relationship-and-key {
+    @include flex(null, null, space-between);
+    flex-wrap: wrap;
+    &--relationship,
+    &--key-success {
+      width: calc(50% - 15px);
+      @include multiple-responsive(small-mobile, mobile, small-tablet) {
+        width: 100%;
+      }
+      &__title {
+        @include text(ProximaNova-Bold, 22px, $charcoal, null);
+        padding-bottom: 20px;
+      }
+      &__description {
+        padding-bottom: 30px;
+        @include text(ProximaNova-Regular, 18px, $charcoal, 30px);
+        @include responsive(small-mobile) {
+          padding-bottom: 20px;
+        }
+        @include multiple-responsive(mobile, small-tablet) {
+          padding-bottom: 30px;
+        }
+      }
+    }
+  }
+}

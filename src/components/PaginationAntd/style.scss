@@ -1,0 +1,18 @@
+.user-pagination {
+  .ant-pagination-item-link {
+    border: none;
+  }
+
+  .ant-pagination-item-active {
+    a {
+      color: #fff;
+    }
+  }
+
+  .ant-pagination-options-quick-jumper {
+    > input {
+      height: 36px;
+      background-color: #fff;
+    }
+  }
+}

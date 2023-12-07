@@ -1,0 +1,64 @@
+$gray-border: #e6e6e6;
+
+.chart-card__wrapper {
+  height: 100%;
+
+  .chart-card {
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid $gray-border;
+    padding: 25px 20px;
+    height: 100%;
+
+    .chart-card__header {
+      display: flex;
+      margin-bottom: 30px;
+      align-items: center;
+      flex-wrap: wrap;
+
+      .header {
+        &__title {
+          font-size: 18px;
+          font-weight: bold;
+          margin-right: auto;
+        }
+
+        &__component {
+          // margin-left: auto;
+        }
+      }
+    }
+
+    .chart-card__content {
+      >.chart__container {
+        margin: 0 auto;
+      }
+    }
+
+    .chart-card__bottom {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      &.horizontal {
+        flex-direction: row;
+      }
+
+      >.card-label {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+
+        >.color {
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+        }
+
+        >.label {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

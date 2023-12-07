@@ -1,0 +1,22 @@
+@import 'src/assets/stylesheets/variables.scss';
+@import 'src/assets/stylesheets/common.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+
+.list-characteristics {
+  display: flex;
+  column-gap: 1rem;
+  @include text(Nunito-Regular, 1.125rem, $charcoal, 1.6875rem);
+  @include multiple-responsive(small-mobile, mobile) {
+    display: block;
+    column-gap: 0;
+  }
+
+  ul {
+    width: 50%;
+    margin: 0;
+    padding-left: 30px;
+    @include multiple-responsive(small-mobile, mobile) {
+      width: auto;
+    }
+  }
+}

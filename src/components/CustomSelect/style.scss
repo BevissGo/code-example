@@ -1,0 +1,38 @@
+@import 'src/assets/stylesheets/variables.scss';
+
+.custom-popup {
+  .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+    background-color: $crystal-blue;
+  }
+}
+
+.custom-select {
+  min-width: 200px;
+  width: max-content;
+
+  &.ant-select-single.ant-select-lg .ant-select-selector {
+    border-radius: 30px;
+  }
+
+  .ant-select-selection-placeholder {
+    color: #000;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  .down-arrow {
+    transform: rotate(0deg);
+    position: relative;
+    bottom: 3.5px;
+    width: 7px;
+    height: 4px;
+    transition: all 0.3s ease;
+    &.rotate {
+      transform: rotate(180deg);
+    }
+    &.rotate-backward {
+      transform: rotate(0deg);
+    }
+  }
+}

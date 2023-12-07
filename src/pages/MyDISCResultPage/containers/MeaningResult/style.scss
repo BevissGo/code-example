@@ -1,0 +1,144 @@
+@import 'src/assets/stylesheets/variables.scss';
+@import 'src/assets/stylesheets/common.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+
+.meaning-result-r {
+  position: relative;
+  border-bottom: 1px solid $silver;
+  @include multiple-responsive(small-mobile, mobile) {
+    padding: 30px 15px 10px;
+  }
+  @include multiple-responsive(small-tablet, tablet) {
+    padding: 40px 38px 10px;
+  }
+  @include responsive(small-desktop) {
+    padding: 40px 56px 10px;
+  }
+  @include responsive(medium-desktop) {
+    padding: 50px 86px 20px;
+  }
+  @include responsive(medium-middle-desktop) {
+    padding: 80px 135px 50px;
+  }
+  &__title {
+    @include text(Georgia-Bold, 40px, $charcoal, null);
+    padding-left: 40px;
+    font-weight: bold;
+    text-align: start;
+    padding-left:0;
+    @include multiple-responsive(small-mobile, mobile) {
+      padding-bottom: 25px;
+    }
+    @include multiple-responsive(small-tablet, tablet, small-desktop) {
+      padding-bottom: 35px;
+    }
+    @include responsive(medium-middle-desktop) {
+      padding-bottom: 50px;
+    }
+  }
+  &__list-behavior {
+    .line-break {
+      height: 1px;
+      background: $silver;
+
+      @include multiple-responsive(small-mobile, mobile) {
+        margin-top: 10px;
+        margin-bottom: 30px;
+      }
+      @include multiple-responsive(small-tablet, tablet) {
+        margin-top: 10px;
+        margin-bottom: 40px;
+      }
+      @include responsive(small-desktop) {
+        margin-top: 10px;
+        margin-bottom: 40px;
+      }
+      @include responsive(medium-desktop) {
+        margin-top: 20px;
+        margin-bottom: 50px;
+      }
+      @include responsive(medium-middle-desktop) {
+        margin-top: 50px;
+        margin-bottom: 80px;
+      }
+    }
+  }
+  &__list-action {
+    position: absolute;
+    height: calc(100% - 352px);
+    top: 176px;
+    @include multiple-responsive(small-mobile, mobile, small-tablet, tablet) {
+      display: none;
+    }
+    @include responsive(small-desktop) {
+      right: 7px;
+    }
+    @include responsive(medium-desktop) {
+      right: 22px;
+    }
+    @include responsive(medium-middle-desktop) {
+      right: 42px;
+    }
+    &__scrollspy {
+      position: sticky;
+      @include table();
+      top: 176px;
+      li.action {
+        border: 1px solid $silver;
+        border-bottom: 0;
+        background: $white;
+        @include flex(null, center, center);
+        font-size: 30px;
+        cursor: pointer;
+        &:first-child {
+          height: 55px;
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
+          span {
+            display: inline-block;
+            line-height: 30px;
+            transform: rotate(90deg);
+            margin-left: 5px;
+          }
+        }
+        &:last-child {
+          border-bottom: 1px solid $silver;
+          border-bottom-left-radius: 10px;
+          border-bottom-right-radius: 10px;
+          height: 54px;
+          span {
+            display: inline-block;
+            line-height: 30px;
+            transform: rotate(-90deg);
+            margin-right: 5px;
+          }
+        }
+        &.disabled {
+          pointer-events: none;
+        }
+      }
+      ul {
+        @include table();
+        li {
+          cursor: pointer;
+          padding: 12px 16px;
+          border: 1px solid $silver;
+          border-bottom: 0;
+          background: $white;
+          text-align: center;
+          @include text(Merriweather-Regular, 24px, $charcoal, null);
+          @include responsive(small-desktop) {
+            padding: 12px;
+          }
+          @include responsive(medium-desktop) {
+            padding: 12px 16px;
+          }
+          &.active-spy {
+            background: $geraldine;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}

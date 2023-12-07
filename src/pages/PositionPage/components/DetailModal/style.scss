@@ -1,0 +1,47 @@
+@import 'src/assets/stylesheets/variables.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+
+.detail-position-modal {
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__description {
+    @include text(Montserrat-Bold, 0.875rem, $black, null);
+
+    width: 15%;
+  }
+
+  &__content {
+    @include text(Montserrat-Regular, 0.875rem, $black, null);
+
+    width: 85%;
+    max-width: 1000px;
+
+    white-space: pre-wrap;
+  }
+
+  &__delete-btn {
+    @include text(Montserrat-Bold, 0.875rem, $white, null);
+    background-color: firebrick;
+    color: white;
+    padding: 4px 12px;
+  }
+
+  &__edit-btn {
+    @include text(Montserrat-Bold, 0.875rem, $black, null);
+    padding: 4px 12px;
+  }
+
+  .ant-modal-header {
+    padding-bottom: 28px;
+    margin-bottom: 40px;
+
+    border-bottom: 2px solid #d9d9d9;
+  }
+
+  .ant-modal-footer {
+    margin-top: 40px;
+  }
+}

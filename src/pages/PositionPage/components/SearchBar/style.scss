@@ -1,0 +1,21 @@
+@import 'src/assets/stylesheets/common.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+@import 'src/assets/stylesheets/variables.scss';
+
+.search-bar {
+  .ant-input-search {
+    &.ant-input-group {
+      &.ant-input-affix-wrapper {
+        &:not(:last-child) {
+          border-top-left-radius: 5px;
+          border-bottom-left-radius: 5px;
+        }
+      }
+    }
+  }
+
+  .ant-input-affix-wrapper {
+    height: 36px;
+    border-radius: 5px;
+  }
+}

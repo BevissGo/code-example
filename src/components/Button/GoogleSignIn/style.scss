@@ -1,0 +1,16 @@
+@import 'src/assets/stylesheets/common.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+@import 'src/assets/stylesheets/variables.scss';
+
+#login-google-btn {
+  @media only screen and (min-width: 512px) and (max-width: $min-tablet-width) {
+    margin-bottom: 20px;
+    border-radius: 55px;
+    background-color: $white;
+    border: 1px solid $light-grey-1;
+
+    iframe {
+      margin: auto !important;
+    }
+  }
+}

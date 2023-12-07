@@ -1,0 +1,51 @@
+@import "src/assets/stylesheets/variables.scss";
+@import "src/assets/stylesheets/common.scss";
+@import "src/assets/stylesheets/mixins.scss";
+
+.business-signup-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  @include flex(null, null, center);
+  align-items: center;
+  z-index: 5;
+
+  width: 100%;
+  height: 100vh;
+  &__background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: 0 auto;
+    min-height: 100vh;
+    z-index: 4;
+    background-color: $black-opacity-45;
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 50px;
+    padding-bottom: 15px;
+    border-radius: 1.25rem;
+    width: 524px;
+
+    background: #fff;
+    div {
+      p {
+        @include text(ProximaNova-Regular, 1.125rem, $charcoal, null);
+        text-align: center;
+      }
+      padding-bottom: 25px;
+    }
+    @include multiple-responsive(mobile, small-mobile) {
+      margin: 15px;
+      padding: 30px;
+    }
+  }
+}

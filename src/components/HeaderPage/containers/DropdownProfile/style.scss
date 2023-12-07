@@ -1,0 +1,47 @@
+@import 'src/assets/stylesheets/common.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+@import 'src/assets/stylesheets/variables.scss';
+
+.dropdown-profile {
+  background: $white-smoke;
+  @include multiple-responsive(small-mobile, mobile, small-tablet, tablet) {
+    display: none;
+  }
+  &__actions {
+    @include table();
+    padding: 10px;
+
+    li {
+      min-width: 210px;
+      padding: 13px 10px;
+      @include text(Montserrat-Regular, 1rem, $black, null);
+
+      @include multiple-responsive(small-mobile, mobile, small-tablet, tablet) {
+        padding: 10px 8px;
+        min-width: 120px;
+      }
+      cursor: pointer;
+      &:hover {
+        background: $floral-white;
+      }
+    }
+  }
+  &__logout {
+    padding: 10px;
+    border-top: 1px solid $silver;
+
+    p {
+      cursor: pointer;
+      min-width: 210px;
+      padding: 13px 10px;
+      @include text(Montserrat-Regular, 1rem, $geraldine, null);
+      @include multiple-responsive(small-mobile, mobile, small-tablet, tablet) {
+        min-width: 120px;
+        padding: 10px 8px;
+      }
+      &:hover {
+        background: $floral-white;
+      }
+    }
+  }
+}

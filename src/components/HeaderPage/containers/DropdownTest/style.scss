@@ -1,0 +1,32 @@
+@import 'src/assets/stylesheets/common.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+@import 'src/assets/stylesheets/variables.scss';
+
+.dropdown-test {
+  background: $white-smoke;
+  width: fit-content;
+
+  @include multiple-responsive(small-mobile, mobile, small-tablet, tablet) {
+    display: none;
+  }
+  &__actions {
+    @include table();
+    padding: 10px;
+
+    li {
+      cursor: pointer;
+      min-width: 210px;
+      padding: 13px 10px;
+      margin: 0 !important;
+      @include text(Montserrat-Regular, 18px, $black, null);
+
+      @include multiple-responsive(small-mobile, mobile, small-tablet, tablet) {
+        min-width: 120px;
+        padding: 10px 8px;
+      }
+      &:hover {
+        background: $floral-white;
+      }
+    }
+  }
+}

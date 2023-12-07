@@ -1,0 +1,76 @@
+@import "src/assets/stylesheets/variables.scss";
+@import "src/assets/stylesheets/common.scss";
+@import "src/assets/stylesheets/mixins.scss";
+
+.result-basic {
+  border-bottom: 1px solid $silver;
+  background-color: $white;
+
+  @include multiple-responsive(small-mobile, mobile) {
+    padding: 0px 15px;
+  }
+  @include multiple-responsive(small-tablet, tablet) {
+    padding: 0px 38px;
+  }
+  @include responsive(small-desktop) {
+    padding: 0px 56px;
+  }
+  @include responsive(medium-desktop) {
+    padding: 0px 86px;
+  }
+  @include responsive(medium-middle-desktop) {
+    padding: 0px 135px;
+  }
+  &__overview {
+    padding-bottom: 50px;
+    @include multiple-responsive(small-mobile, mobile, small-tablet) {
+      padding-bottom: 20px;
+    }
+    @include responsive(tablet) {
+      padding-bottom: 25px;
+    }
+    &__title {
+      font-weight: bold;
+      @include text(Georgia-Bold, 20px, $charcoal, null);
+      text-transform: uppercase;
+      padding-bottom: 20px;
+      @include multiple-responsive(small-mobile, mobile) {
+        padding-bottom: 15px;
+      }
+    }
+    &__body {
+      margin-bottom: 40px;
+      @include flex(null, null, space-between);
+      @include multiple-responsive(small-mobile, mobile) {
+        display: block;
+      }
+      div {
+        background-image: linear-gradient(#9ca1a6, #bdc2c7, #d6d6d6);
+        background-repeat: repeat;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        @include text(ProximaNova-Regular, 18px, $charcoal, 30px);
+        &.left {
+          padding-right: 65px;
+          @include multiple-responsive(small-mobile, mobile) {
+            padding: 0 0 15px;
+          }
+          @include responsive(small-tablet) {
+            padding-right: 20px;
+          }
+          @include responsive(tablet) {
+            padding-right: 30px;
+          }
+        }
+      }
+    }
+    &__summary {
+      @include multiple-responsive(small-mobile, mobile) {
+        display: block;
+      }
+      div {
+        @include text(ProximaNova-Regular, 18px, $charcoal, 30px);
+      }
+    }
+  }
+}

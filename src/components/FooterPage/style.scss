@@ -1,0 +1,268 @@
+@import 'src/assets/stylesheets/common.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+@import 'src/assets/stylesheets/global.scss';
+@import 'src/assets/stylesheets/variables.scss';
+
+.footer-page {
+  overflow: hidden;
+  position: relative;
+  background-color: $heavy-peach;
+
+  @include multiple-responsive(small-mobile, mobile) {
+    display: inline-block;
+    padding: 30px 15px 30px;
+  }
+  @include multiple-responsive(small-tablet, tablet) {
+    padding: 50px 38px 60px;
+  }
+  @include responsive(small-desktop) {
+    padding: 50px 56px0;
+  }
+  @include responsive(medium-desktop) {
+    padding: 50px 86px 20px;
+  }
+  @include responsive(medium-middle-desktop) {
+    padding: 50px 86px 20px;
+  }
+  @include responsive(huge-desktop) {
+    padding: 63px 155px 50px;
+  }
+  &__disc-name {
+    margin: 0;
+    color: $charcoal;
+    font-size: 1.25rem;
+    padding-bottom: 75px;
+    text-transform: lowercase;
+    font-family: ProximaNova-Bold;
+
+    @include multiple-responsive(small-mobile, mobile) {
+      padding-bottom: 15px;
+
+      img {
+        width: 35px;
+        height: 35px;
+      }
+    }
+    @include responsive(small-desktop) {
+      padding-bottom: 20px;
+    }
+    @include multiple-responsive(small-tablet, tablet, small-tablet) {
+      padding-bottom: 20px;
+    }
+
+    @include responsive(medium-middle-desktop) {
+      padding-bottom: 30px;
+    }
+  }
+  &__url {
+    bottom: 18px;
+    width: 252px;
+    height: 100px;
+    color: #454545;
+    display: inline;
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+    font-style: normal;
+    margin: 00 9px 10px;
+    line-height: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+
+    font-family: ProximaNova-Regular;
+
+    @include multiple-responsive(small-mobile, mobile) {
+      width: 100%;
+      bottom: 11px;
+      font-size: 22px;
+    }
+    @include responsive(small-desktop) {
+      font-size: 24px;
+    }
+  }
+  &__left {
+    flex: 1 1 auto;
+    @include responsive(medium-desktop) {
+      padding-left: 0rem;
+    }
+    @include responsive(large-desktop) {
+      padding-left: 6.5rem;
+    }
+    @include responsive(huge-desktop) {
+      padding-left: 2.5rem;
+    }
+  }
+  ul {
+    &.disc-order {
+      list-style-type: disc;
+
+      & > li {
+        line-height: 30px;
+        @include text(Merriweather-Regular, 1rem, $charcoal, null);
+      }
+    }
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    padding-bottom: 1rem;
+    padding-bottom: -20px;
+
+    li {
+      color: $black;
+      @include multiple-responsive(small-mobile, mobile) {
+        padding-bottom: 15px;
+      }
+      @include multiple-responsive(small-tablet, tablet, small-desktop) {
+        padding-bottom: 15px;
+      }
+      @include responsive(medium-middle-desktop) {
+        padding-bottom: 20px;
+      }
+      &:last-child {
+        padding-bottom: 0;
+      }
+      a {
+        text-decoration: none;
+        @include text(Georgia, 18px, $black, null);
+
+        @include responsive(small-desktop) {
+          font-size: 16px;
+        }
+        @include responsive(medium-middle-desktop) {
+          font-size: 18px;
+        }
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  &__company-info {
+    max-width: 40%;
+
+    @include multiple-responsive(small-mobile, mobile) {
+      max-width: 100%;
+      margin-top: 10px;
+      padding-bottom: 10px !important;
+    }
+    @include multiple-responsive(small-tablet, tablet, small-desktop) {
+      padding-bottom: 15px !important;
+    }
+    @include responsive(medium-middle-desktop) {
+      margin: 14px 0 0 327px;
+      padding-bottom: 20px !important;
+    }
+    li {
+      line-height: 2;
+      padding-bottom: 3px !important;
+      @include text(ProximaNova-Regular, 18px, $black, null);
+
+      @include multiple-responsive(small-mobile, mobile) {
+        padding-bottom: 0 !important;
+      }
+      @include responsive(small-desktop) {
+        font-size: 16px;
+      }
+      @include responsive(medium-middle-desktop) {
+        font-size: 18px;
+      }
+
+      &:last-child {
+        padding-bottom: 0 !important;
+      }
+      &:first-child {
+        font-weight: bold;
+      }
+    }
+  }
+
+  &__upper-section {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    @include multiple-responsive(small-mobile, mobile) {
+      flex-direction: column;
+    }
+  }
+
+  hr {
+    border: 0;
+    height: 1px;
+    display: block;
+    margin-bottom: 30px;
+    border-top: 1px solid #dcd4c9;
+  }
+
+  &__copyright-section {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    > div {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__icon {
+    height: auto;
+    margin-left: 20px;
+    max-width: 3.75rem;
+
+    img {
+      width: 100%;
+    }
+    &:first-child {
+      margin-left: 0;
+    }
+    @include multiple-responsive(small-mobile, mobile) {
+      max-width: 2.7rem;
+      margin-left: 10px;
+    }
+  }
+
+  &__copyright {
+    text-decoration: none;
+    @include text(sans-serif, 18px, $black, null);
+
+    @include responsive(small-desktop) {
+      font-size: 16px;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__BCT {
+    height: 120px;
+    padding-bottom: 20px;
+    align-items: flex-end;
+    display: flex !important;
+
+    img {
+      margin: 0;
+    }
+    @include responsive(medium-middle-desktop) {
+      img {
+        margin-top: -55px;
+      }
+    }
+  }
+}
+
+.hidden-PC {
+  display: none;
+  @include multiple-responsive(small-mobile, mobile) {
+    display: block !important;
+  }
+}
+
+.hidden-mobile {
+  display: block;
+  @include multiple-responsive(small-mobile, mobile) {
+    display: none !important;
+  }
+}

@@ -1,0 +1,37 @@
+@import 'src/assets/stylesheets/common.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+@import 'src/assets/stylesheets/variables.scss';
+
+.test {
+  position: relative;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  padding: 0 14px;
+
+  p {
+    cursor: pointer;
+    text-decoration: none;
+    @include text(Montserrat-Regular, 18px, $charcoal, null);
+
+    &.text-danger {
+      color: $geraldine;
+    }
+
+    img {
+      width: 10px;
+      margin-left: 8px;
+
+      @include multiple-responsive(small-mobile, mobile, small-tablet, tablet) {
+        display: none;
+      }
+    }
+  }
+
+  &.active {
+    border-bottom: 2px solid $black;
+
+    p {
+      font-family: Montserrat-Bold;
+    }
+  }
+}

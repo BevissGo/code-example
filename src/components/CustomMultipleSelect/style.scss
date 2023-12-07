@@ -1,0 +1,39 @@
+@import 'src/assets/stylesheets/mixins.scss';
+@import 'src/assets/stylesheets/variables.scss';
+
+.custom-select {
+  height: 100%;
+  width: max-content;
+}
+
+.custom-option {
+  @include flex(row, center, flex-start);
+  background-color: #ffffff;
+  box-sizing: border-box;
+  min-height: 32px;
+  width: 100%;
+  gap: 8px;
+  padding-left: 12px;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+  color: rgba(0, 0, 0, 0.88);
+  font-weight: 400;
+  font-size: 14px;
+  font-variant: initial;
+  list-style: 1.5;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+
+  .checkbox-icon {
+    position: relative;
+    width: 9px;
+    height: 9px;
+  }
+}

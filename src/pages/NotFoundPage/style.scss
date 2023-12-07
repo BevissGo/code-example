@@ -1,0 +1,15 @@
+@import 'src/assets/stylesheets/variables.scss';
+@import 'src/assets/stylesheets/common.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+
+.not-found-page {
+  height: var(--app-height);
+  background: $romance;
+  @include flex(column, center, center);
+  &__code {
+    @include text(ProximaNova-Bold, 7.975rem, $charcoal, null);
+  }
+  &__title {
+    @include text(ProximaNova-Regular, 2rem, $charcoal, null);
+  }
+}

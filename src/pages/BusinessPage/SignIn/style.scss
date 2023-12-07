@@ -1,0 +1,42 @@
+@import "src/assets/stylesheets/variables.scss";
+@import "src/assets/stylesheets/common.scss";
+@import "src/assets/stylesheets/mixins.scss";
+
+.business-signin {
+  background: $romance;
+  position: relative;
+  overflow: hidden;
+  &__form {
+    z-index: 1;
+    position: relative;
+    top: 9.375rem;
+    margin-bottom: 14.375rem;
+    @include multiple-responsive(mobile, small-mobile, tablet, small-tablet) {
+      top: 5rem;
+      margin-bottom: 10.375rem;
+    }
+    @include multiple-responsive(small-mobile, mobile) {
+      top: 2rem;
+    }
+    &__background {
+      position: relative;
+      left: 50%;
+      transform: translate(-50%);
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+
+      background-color: $pink;
+      border: 1px solid $yellow;
+      box-sizing: border-box;
+      border-radius: 20px;
+
+      @include multiple-responsive(mobile, small-mobile) {
+        width: 95%;
+      }
+      @include multiple-responsive(tablet, small-tablet) {
+        width: 90%;
+      }
+    }
+  }
+}

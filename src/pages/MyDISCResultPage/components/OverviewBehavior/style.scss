@@ -1,0 +1,57 @@
+@import 'src/assets/stylesheets/variables.scss';
+@import 'src/assets/stylesheets/common.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+
+.overview-behavior-r {
+  background-color: none;
+  &__intro {
+    display: inline-block;
+    width: 100%;
+    padding-bottom: 50px;
+    @include multiple-responsive(small-mobile, mobile, small-tablet) {
+      padding-bottom: 25px;
+      max-width: 670px;
+    }
+  }
+  &__title {
+    @include text(Georgia-Bold, 20px, $charcoal, null);
+    padding-bottom: 20px;
+    font-weight: bold;
+    @include multiple-responsive(small-mobile, mobile, small-tablet) {
+      padding-bottom: 15px;
+    }
+  }
+  &__description {
+    padding-left:0;
+    @include text(ProximaNova-Regular, 18px, $charcoal, 30px);
+    span {
+      font-family: ProximaNova-Bold;
+    }
+  }
+  &__list-article {
+    @include flex(null, null, space-between);
+    flex-wrap: wrap;
+    &__item {
+      max-width: calc(50% - 15px);
+      @include multiple-responsive(small-mobile, mobile, small-tablet) {
+        max-width: 100%;
+      }
+    }
+  }
+  &__article {
+    padding-bottom: 30px;
+    @include multiple-responsive(small-mobile, mobile, small-tablet) {
+      padding-bottom: 20px;
+    }
+    &__title {
+      @include text(ProximaNova-Bold, 22px, $charcoal, null);
+      padding-bottom: 20px;
+      @include multiple-responsive(small-mobile, mobile, small-tablet) {
+        padding-bottom: 15px;
+      }
+    }
+    &__description {
+      @include text(ProximaNova-Regular, 18px, $charcoal, 30px);
+    }
+  }
+}

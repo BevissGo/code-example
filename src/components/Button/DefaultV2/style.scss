@@ -1,0 +1,11 @@
+@import 'src/assets/stylesheets/common.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+@import 'src/assets/stylesheets/animates.scss';
+@import 'src/assets/stylesheets/variables.scss';
+
+.button-default-v2 {
+  position: relative;
+  text-decoration: none;
+  @include button(null, 10px 24px, 20px, $black);
+  @include text(Montserrat-Regular, 1.125rem, $white, null);
+}

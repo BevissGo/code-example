@@ -1,0 +1,20 @@
+.business-profile-detail-box {
+  display: flex;
+  flex-direction: column;
+
+  padding: 20px;
+  margin-top: 20px;
+
+  height: fit-content;
+
+  background-color: white;
+  border-radius: 10px;
+
+  &__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 120%;
+
+    color: #555555;
+  }
+}

@@ -1,0 +1,121 @@
+@import 'src/assets/stylesheets/variables.scss';
+@import 'src/assets/stylesheets/common.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+
+.side-of-brain {
+  background: $romance;
+  @include multiple-responsive(small-mobile, mobile) {
+    padding-top: 107px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 10px;
+  }
+  @include multiple-responsive(small-tablet, tablet) {
+    padding-top: 117px;
+    padding-right: 38px;
+    padding-left: 38px;
+    padding-bottom: 10px;
+  }
+  @include responsive(small-desktop) {
+    padding-top: 157px;
+    padding-right: 56px;
+    padding-left: 56px;
+    padding-bottom: 10px;
+  }
+  @include responsive(medium-desktop) {
+    padding-right: 86px;
+    padding-left: 86px;
+    padding-bottom: 50px;
+  }
+  @include responsive(medium-middle-desktop) {
+    padding-left: 135px;
+    padding-right: 135px;
+    padding-top: 187px;
+  }
+  &__background {
+    @include flex(null, center, space-between);
+
+    @include multiple-responsive(small-mobile, mobile) {
+      flex-direction: column;
+      margin-left: 0;
+      padding-top: 0;
+    }
+    @include multiple-responsive(small-tablet, tablet) {
+      flex-direction: column;
+    }
+  }
+  &__icon {
+    width: 100%;
+    text-align: center;
+
+    img {
+      @include multiple-responsive(mobile) {
+        max-width: 100%;
+        height: auto;
+      }
+      @include multiple-responsive(small-mobile) {
+        max-width: 100%;
+        height: auto;
+      }
+      @include multiple-responsive(small-tablet, tablet) {
+        max-width: 50%;
+        text-align: center;
+        height: auto;
+      }
+      @include multiple-responsive(small-desktop) {
+        max-width: 100%;
+        height: 400px;
+      }
+      @include multiple-responsive(medium-desktop) {
+        max-width: 80%;
+        height: auto;
+        text-align: right;
+      }
+    }
+    &.left {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+  &__content {
+    padding: 0 30px;
+    @include multiple-responsive(small-mobile, mobile) {
+      padding: 30px 0;
+    }
+    @include multiple-responsive(small-tablet, tablet) {
+      padding: 20px 0 20px 0;
+    }
+    @include responsive(small-desktop) {
+      padding-left: 116px;
+    }
+    @include responsive(medium-desktop) {
+      padding-left: 116px;
+    }
+    @include responsive(medium-middle-desktop) {
+      padding-left: 116px;
+    }
+    &__title {
+      text-align: center;
+      font-weight: bold;
+      @include text(Georgia-Bold, 48px, $charcoal, null);
+      padding-bottom: 20px;
+
+      @include multiple-responsive(small-mobile, mobile) {
+        font-size: 30px;
+      }
+      @include multiple-responsive(small-tablet, tablet) {
+        font-size: 48px;
+        padding-bottom: 10px;
+      }
+    }
+    &__description {
+      padding-bottom: 30px;
+      @include text(ProximaNova-Regular, 20px, $black, 1.7);
+
+      label {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  }
+}

@@ -1,0 +1,234 @@
+@import 'src/assets/stylesheets/variables.scss';
+@import 'src/assets/stylesheets/common.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+
+.eq-result-page {
+  position: relative;
+
+  &__container {
+    padding-bottom: 60px;
+    background: $romance;
+    @include multiple-responsive(small-mobile, mobile) {
+      padding-top: 82px;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-bottom: 40px;
+    }
+    @include multiple-responsive(small-tablet, tablet) {
+      padding-top: 109px;
+      padding-left: 38px;
+      padding-right: 38px;
+    }
+    @include responsive(small-desktop) {
+      padding-top: 149px;
+      padding-left: 56px;
+      padding-right: 56px;
+    }
+    @include multiple-responsive(medium-desktop, medium-middle-desktop) {
+      padding-top: 159px;
+      padding-left: 86px;
+      padding-right: 86px;
+    }
+    @include responsive(large-desktop) {
+      padding-top: 200px;
+      padding-left: 135px;
+      padding-right: 135px;
+    }
+    &__how-to-practice-eq {
+      &__title {
+        @include text(Merriweather-Bold, 2.5rem, $charcoal, 3.75rem);
+        @include multiple-responsive(small-mobile, mobile) {
+          font-size: 1.875rem;
+          line-height: 2.9375rem;
+          padding-bottom: 45px;
+        }
+        @include multiple-responsive(
+          small-tablet,
+          tablet,
+        ) {
+          padding-bottom: 60px;
+        }
+
+        @include multiple-responsive(
+          small-desktop,
+          medium-desktop,
+          medium-middle-desktop,
+          large-desktop
+        ) {
+          white-space: pre-line;
+          padding-bottom: 60px;
+        }
+      }
+      &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: baseline;
+        row-gap: 110px;
+        @include multiple-responsive(small-mobile, mobile) {
+          display: block;
+        }
+        &__item {
+          width: 47%;
+          text-align: center;
+          @include multiple-responsive(small-mobile, mobile) {
+            width: 100%;
+            margin-bottom: 45px;
+          }
+          img {
+            width: auto;
+            height: 300px;
+            margin-bottom: 30px;
+            @include multiple-responsive(small-mobile, mobile) {
+              height: 200px;
+              width: auto;
+              margin-bottom: 35px;
+            }
+            @include multiple-responsive(small-tablet, tablet) {
+              height: 200px;
+              max-width: 90%;
+            }
+          }
+          &__title {
+            text-align: left;
+            @include text(ProximaNova-Bold, 1.25rem, null, 1.6875rem);
+            @include multiple-responsive(small-mobile, mobile) {
+              font-size: 1.125rem;
+            }
+          }
+          &__content {
+            text-align: left;
+            @include text(ProximaNova-Regular, 1.125rem, null, 1.875rem);
+            @include multiple-responsive(small-mobile, mobile) {
+              font-size: 0.9375rem;
+              list-style: 1.6875rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__container:nth-child(3) {
+    background: $white;
+    padding-top: 60px;
+    @include multiple-responsive(small-mobile, mobile) {
+      padding-top: 45px;
+    }
+  }
+
+  &__title {
+    @include text(Merriweather-Bold, 3rem, $charcoal, 3.75rem);
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    @include multiple-responsive(small-mobile, mobile) {
+      font-size: 34px;
+      line-height: 42px;
+      text-transform: none;
+    }
+  }
+  &__subscription {
+    @include text(ProximaNova-Regular, 1.5rem, $charcoal, 2.1875rem);
+    margin: 30px 0;
+    @include multiple-responsive(small-mobile, mobile) {
+      font-size: 1.125rem;
+      line-height: 1.875rem;
+    }
+    @include responsive(large-desktop) {
+      margin-top: 65px;
+      margin-bottom: 60px;
+    }
+    &__score-total {
+      @include text(ProximaNova-Bold, 1.5rem, $charcoal, null);
+    }
+  }
+
+  &__content {
+    &__title {
+      @include text(Merriweather-Bold, 2.5rem, $charcoal, null);
+      margin-bottom: 1.875rem;
+      @include multiple-responsive(small-mobile, mobile) {
+        font-size: 30px;
+      }
+    }
+    &__expanded-characteristic {
+      @include text(ProximaNova-Regular, 1.125rem, $charcoal, 1.6875rem);
+      margin-top: 30px;
+    }
+  }
+
+  &__empty {
+    height: 100vh;
+    background-color: $romance;
+
+    &__title {
+      @include text(Georgia-Bold, 2.5rem, $charcoal, null);
+      text-align: center;
+      margin-bottom: 3rem;
+      @include multiple-responsive(small-mobile, mobile) {
+        padding-top: 82px;
+      }
+      @include multiple-responsive(small-tablet, tablet) {
+        padding-top: 109px;
+      }
+      @include responsive(small-desktop) {
+        padding-top: 149px;
+      }
+      @include responsive(medium-middle-desktop) {
+        padding-top: 159px;
+      }
+      @include responsive(large-desktop) {
+        padding-top: 169px;
+      }
+    }
+
+    &__content {
+      background-color: $pink;
+      margin: auto !important;
+      margin-bottom: 6rem !important;
+      width: 80%;
+      border-radius: 1.25rem;
+      padding-top: 5rem;
+      border: solid $pink-3 1px;
+      @include text(ProximaNova-Regular, 1.25rem, $charcoal, 20px);
+      @include multiple-responsive(small-mobile, mobile) {
+        flex-direction: column;
+        padding: 30px 20px;
+      }
+      @include multiple-responsive(small-tablet, tablet) {
+        flex-direction: column;
+        padding: 80px 20px;
+      }
+      @include responsive(small-desktop) {
+        padding: 80px 20px;
+      }
+      @include responsive(medium-desktop) {
+        padding: 80px 20px;
+      }
+      @include responsive(medium-middle-desktop) {
+        padding: 80px 30px;
+      }
+      @include responsive(large-desktop) {
+        padding: 80px 30px;
+      }
+
+      &__empty-eq-result {
+        @include text(ProximaNova-Regular, 1.5rem, $grey-1, 1.5rem);
+        margin-top: 6rem;
+        margin-bottom: 2rem;
+        text-align: center;
+      }
+
+      &__testNow {
+        @include text(ProximaNova-Regular, 1.5rem, $grey-1, 1.5rem);
+        text-align: center;
+      }
+
+      button {
+        margin: auto;
+        margin-top: 4rem;
+        display: flex;
+        margin-bottom: 6rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@import "assets/stylesheets/variables.scss";
+@import "src/assets/stylesheets/mixins.scss";
+
+.export-btn {
+  @include text(ProximaNova-Regular, 1.125rem, $charcoal, null);
+  gap: 20px;
+  width: 20%;
+  max-width: 170px;
+  align-items: center;
+  justify-content: center;
+  display: flex !important;
+  border-radius: 5px !important;
+  border: 1px solid $charcoal !important;
+
+  > svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  > span {
+    font-size: 18px;
+  }
+}

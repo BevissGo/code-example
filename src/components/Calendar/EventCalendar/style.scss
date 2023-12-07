@@ -1,0 +1,91 @@
+@import 'src/assets/stylesheets/variables.scss';
+$gray-border: #e6e6e6;
+$blue-light: #15b2c7;
+$calendar-cell-bg: #32ADFA;
+
+.event-calendar__wrapper {
+  height: 100%;
+
+  .event-calendar__container {
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid $gray-border;
+    padding: 20px;
+    height: 100%;
+
+    .calendar-header__container {
+      .calendar-header {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 20px;
+
+        >* {
+          width: fit-content;
+        }
+
+        .calendar-header__navigator {
+          &:hover {
+            color: $blue-light;
+            cursor: pointer;
+          }
+        }
+
+        .calendar-header__title {
+          margin: 0 10px;
+        }
+      }
+    }
+
+    .ant-picker-cell {
+      .date-cell__container {
+        display: flex;
+        justify-content: center;
+
+        .date-cell {
+          border: 1px solid transparent;
+          background-color: transparent;
+          width: 32px;
+          height: 32px;
+          line-height: 32px;
+          border-radius: 50%;
+          text-align: middle;
+
+          .date-cell__day {
+            height: 30px;
+            font-size: 15px;
+          }
+
+          .date-cell__event {
+            .ant-badge {
+              display: flex;
+              justify-content: center;
+              width: fit-content;
+              margin: 0 auto;
+              top: -5px;
+
+              .ant-badge-status-text {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+
+      &.ant-picker-cell-selected {
+        .date-cell__container {
+          .date-cell {
+            background-color: $calendar-cell-bg;
+          }
+        }
+      }
+
+      &.ant-picker-cell-today {
+        .date-cell__container {
+          .date-cell {
+            border: 1px solid $calendar-cell-bg;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@import 'src/assets/stylesheets/variables.scss';
+@import 'src/assets/stylesheets/common.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+
+.eq-test {
+  .form-radio {
+    display: block;
+    margin-left: 0px;
+    @include multiple-responsive(small-mobile, mobile, small-tablet) {
+      margin-left: 0;
+      .input-radio:first-child {
+        margin-left: 0;
+      }
+    }
+    @include responsive(small-desktop) {
+      display: flex;
+      column-gap: 25px;
+      align-items: center;
+
+      .label-clickable-input-radio:first-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .label-clickable-input-radio {
+      display: flex;
+    }
+  }
+}

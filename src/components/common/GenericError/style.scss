@@ -1,0 +1,14 @@
+@import 'src/assets/stylesheets/variables.scss';
+@import 'src/assets/stylesheets/common.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+
+.generic-error-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+
+  &__message {
+    @include text(ProximaNova-Regular, 15px, $black, null);
+  }
+}

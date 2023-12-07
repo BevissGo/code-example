@@ -1,0 +1,15 @@
+.candidates-overview {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  &__section1 {
+    width: 75%;
+  }
+
+  &__section2 {
+    width: 25%;
+    padding: 20px;
+  }
+}

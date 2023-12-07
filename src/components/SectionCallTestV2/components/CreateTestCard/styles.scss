@@ -1,0 +1,72 @@
+@import 'src/assets/stylesheets/common.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+@import 'src/assets/stylesheets/animates.scss';
+@import 'src/assets/stylesheets/variables.scss';
+
+.section-call-test-v2__create-test-card {
+  background-color: $white;
+  padding: 28px 54px 20px;
+  border-radius: 10px;
+  @include flex(column, center, center);
+
+  button {
+    @include button(256px, 10px, 0, transparent);
+    @include text(Montserrat-Bold, 16px, $white, null);
+
+    &.danger {
+      background: $free-speech-red;
+    }
+
+    &.success {
+      background: $british-racing-green;
+    }
+
+    &.primary {
+      background: $smalt;
+    }
+
+    &.warning {
+      background: $gambodge;
+    }
+
+    @include multiple-responsive(small-mobile, mobile) {
+      @include button(100px, 8px, 0, transparent);
+      font-size: 12px;
+    }
+
+    @include multiple-responsive(small-tablet) {
+      @include button(180px, 10px, 0, transparent);
+      font-size: 14px;
+    }
+
+    @include multiple-responsive(tablet) {
+      width: 200px;
+      font-size: 14px;
+    }
+  }
+
+  &__title {
+    @include text(Georgia-Bold, 22px, $black, 33px);
+    text-align: center;
+    margin-bottom: 10px;
+
+    @include multiple-responsive(small-mobile, mobile) {
+      font-size: 14px;
+      line-height: 18px;
+    }
+
+    @include multiple-responsive(small-tablet, tablet) {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+
+  @include multiple-responsive(small-mobile, mobile) {
+    padding: 8px;
+    width: 170px;
+  }
+
+  @include multiple-responsive(small-tablet) {
+    padding: 22px 36px 18px;
+  }
+}

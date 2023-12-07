@@ -1,0 +1,34 @@
+@import 'src/assets/stylesheets/variables.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+
+.custom-test-information {
+  background-color: $white;
+  padding: 20px 16px;
+
+  border-bottom: 1px solid $grey-6;
+
+  &__input-number {
+    width: 100%;
+    padding: 8px;
+
+    border-radius: 4px;
+  }
+
+  &__form-label {
+    @include text(Montserrat-Bold, 1rem, $black, null);
+    text-align: start;
+  }
+
+  .ant-row {
+    align-items: center;
+  }
+
+  .ant-form-item-label {
+    text-align: start;
+    min-width: 148px;
+  }
+
+  .anticon {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,8 @@
+$select-border-color: #E5E5EA;
+
+.dashboard-select {
+  width: 100% !important;
+  // height: 40px;
+  border-radius: 7px;
+  border: 1px solid $select-border-color;
+}

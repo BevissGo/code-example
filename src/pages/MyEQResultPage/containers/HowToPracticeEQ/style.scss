@@ -1,0 +1,78 @@
+@import 'src/assets/stylesheets/variables.scss';
+@import 'src/assets/stylesheets/common.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+
+.my-eq-result-page__content {
+  .how-to-practice-eq {
+    background: $white;
+    padding: 60px 30px;
+    &__title {
+      @include text(Merriweather-Bold, 2.5rem, $charcoal, 3.75rem);
+      @include multiple-responsive(small-mobile, mobile) {
+        font-size: 1.875rem;
+        line-height: 2.9375rem;
+        padding-bottom: 45px;
+      }
+      @include multiple-responsive(small-tablet, tablet) {
+        padding-bottom: 60px;
+      }
+
+      @include multiple-responsive(
+        small-desktop,
+        medium-desktop,
+        medium-middle-desktop,
+        large-desktop
+      ) {
+        white-space: pre-line;
+        padding-bottom: 60px;
+      }
+    }
+    &__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      row-gap: 110px;
+      @include multiple-responsive(small-mobile, mobile, small-tablet) {
+        display: block;
+      }
+      &__item {
+        width: 47%;
+        text-align: center;
+        @include multiple-responsive(small-mobile, mobile, small-tablet) {
+          width: 100%;
+          margin-bottom: 45px;
+        }
+        img {
+          width: auto;
+          height: 300px;
+          margin-bottom: 30px;
+          @include multiple-responsive(small-mobile, mobile) {
+            height: 200px;
+            width: auto;
+            margin-bottom: 35px;
+          }
+          @include multiple-responsive(small-tablet, tablet) {
+            height: 200px;
+            max-width: 90%;
+          }
+        }
+        &__title {
+          text-align: left;
+          @include text(ProximaNova-Bold, 1.25rem, null, 1.6875rem);
+          @include multiple-responsive(small-mobile, mobile) {
+            font-size: 1.125rem;
+          }
+        }
+        &__content {
+          text-align: left;
+          @include text(ProximaNova-Regular, 1.125rem, null, 1.875rem);
+          @include multiple-responsive(small-mobile, mobile) {
+            font-size: 0.9375rem;
+            list-style: 1.6875rem;
+          }
+        }
+      }
+    }
+  }
+}

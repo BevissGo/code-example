@@ -1,0 +1,33 @@
+@import 'src/assets/stylesheets/variables.scss';
+@import 'src/assets/stylesheets/common.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+
+.group-question {
+  padding: 20px 40px;
+  border-bottom: 1px solid $whisper;
+  @include multiple-responsive(small-mobile, mobile, small-tablet) {
+    padding: 20px;
+  }
+  &__title {
+    @include flex(null, center, space-between);
+    margin-bottom: 15px;
+    @include multiple-responsive(small-mobile, mobile, small-tablet) {
+      display: block;
+    }
+  }
+  &__wrapper-title{
+    display: flex;
+    justify-content: space-between;
+    & p:last-child{
+      @include multiple-responsive(small-mobile, mobile, small-tablet) {
+        width: 200px;
+      }
+      width: 300px;
+      padding-left: 20px;
+      box-sizing: border-box;
+    }
+  }
+  .question:last-child {
+    margin-bottom: 0;
+  }
+}

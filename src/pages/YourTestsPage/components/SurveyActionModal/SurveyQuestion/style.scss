@@ -1,0 +1,63 @@
+@import 'src/assets/stylesheets/variables.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+
+.survey-question {
+  margin-top: 20px;
+
+  &__question-group {
+    padding: 20px;
+    background-color: #f7f7f7;
+
+    &:not(:first-child) {
+      margin-top: 28px;
+    }
+  }
+
+  &__question-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+
+    border-bottom: 1px solid $grey-6;
+  }
+
+  &__question-index {
+    @include text(Montserrat-Bold, 1rem, $black, null);
+  }
+
+  &__form-label {
+    @include text(Montserrat-Bold, 1rem, $black, null);
+    margin-right: 20px;
+
+    &--small {
+      @include text(Montserrat-Regular, 0.875rem, $black, null);
+      font-weight: 600;
+
+      margin-right: 60px;
+    }
+  }
+
+  &__add-question-btn {
+    padding: 4px;
+    font-size: 20px;
+    cursor: pointer;
+
+    &:hover {
+      color: $dodger-blue;
+    }
+  }
+
+  &__remove-question-btn {
+    padding: 4px;
+    margin-left: 8px;
+    font-size: 20px;
+    cursor: pointer;
+
+    &:hover {
+      color: $fire-brick;
+    }
+  }
+}

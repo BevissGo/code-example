@@ -1,0 +1,23 @@
+@import 'src/assets/stylesheets/variables.scss';
+@import 'src/assets/stylesheets/common.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+
+.brain-question {
+  // padding: 20px 40px;
+  border-bottom: 1px solid $whisper;
+  @include multiple-responsive(small-mobile, mobile, small-tablet) {
+    padding: 20px;
+  }
+  &__title {
+    margin-bottom: 15px;
+    @include multiple-responsive(small-mobile, mobile, small-tablet) {
+      display: block;
+    }
+  }
+  &__content {
+    @include text(Merriweather-Regular, 1rem, $charcoal, null);
+    @include multiple-responsive(small-mobile, mobile, small-tablet) {
+      margin-bottom: 10px;
+    }
+  }
+}

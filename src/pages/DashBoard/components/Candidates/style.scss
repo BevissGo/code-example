@@ -1,0 +1,113 @@
+.container-candidate {
+  margin-top: 30px;
+}
+
+.content-candidate {
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(69, 69, 69, 0.5);
+  border-radius: 15px;
+  margin-bottom: 20px;
+  padding: 30px;
+  box-sizing: border-box;
+
+  &__candidate-item {
+    flex: 1;
+  }
+}
+
+.flex-row-candidate {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.avt-style {
+  width: 58px;
+  height: 58px;
+  margin-right: 14px;
+}
+
+.text-20 {
+  font-family: ProximaNova-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 20px;
+  /* identical to box height */
+  letter-spacing: 1px;
+  color: #4f2108;
+  margin-bottom: 2px;
+}
+
+.text-15 {
+  font-family: ProximaNova-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 12px;
+  /* identical to box height */
+  letter-spacing: 1px;
+  color: #454545;
+  margin-bottom: 2px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-12 {
+  font-family: ProximaNova-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 12px;
+  /* identical to box height */
+  letter-spacing: 1px;
+  color: #454545;
+  margin-bottom: 2px;
+}
+
+.ant-pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.ant-pagination-item-active {
+  font-weight: 500;
+  background: #4f2108;
+  border-color: #4f2108;
+  border-radius: 4px !important;
+
+  & > a {
+    color: #fff;
+  }
+
+  & > a:hover {
+    color: #ffffff !important;
+  }
+}
+
+.ant-pagination-disabled .ant-pagination-item-link,
+.ant-pagination-disabled:hover .ant-pagination-item-link,
+.ant-pagination-disabled:focus-visible .ant-pagination-item-link {
+  border-width: 0px !important;
+}
+
+.ant-pagination-prev .ant-pagination-item-link,
+.ant-pagination-next .ant-pagination-item-link {
+  border-width: 0px !important;
+}
+
+.ant-pagination-item {
+  border-width: 0;
+
+  & > a:hover {
+    color: #454545;
+  }
+}

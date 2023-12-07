@@ -1,0 +1,19 @@
+@import 'src/assets/stylesheets/variables.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+
+.header-campaign-detail-modal {
+  width: 96%;
+
+  &__title {
+    @include text(Montserrat-Bold, 1.25rem, $black, null);
+  }
+
+  &__status {
+    @include text(Montserrat-Regular, 0.875rem, $black, null);
+    font-weight: 600;
+
+    padding: 4px 12px;
+    margin-left: 8px;
+    border-radius: 100px;
+  }
+}

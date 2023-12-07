@@ -1,0 +1,18 @@
+.business-profile-services {
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+
+  &__item {
+    width: fit-content;
+    padding: 10px 30px;
+    margin-right: 20px;
+
+    border: 1px solid #dadada;
+    border-radius: 20px;
+
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 120%;
+  }
+}

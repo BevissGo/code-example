@@ -1,0 +1,19 @@
+@import 'src/assets/stylesheets/common.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+@import 'src/assets/stylesheets/variables.scss';
+
+.form-image-radio {
+  width: 300px;
+  display: grid;
+  row-gap: 20px;
+  flex-wrap: wrap;
+  column-gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+
+  @include multiple-responsive(small-mobile, mobile, small-tablet) {
+    margin-left: 0;
+    .input-radio:first-child {
+      margin-left: 0;
+    }
+  }
+}

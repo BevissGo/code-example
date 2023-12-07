@@ -1,0 +1,73 @@
+@import "src/assets/stylesheets/variables.scss";
+@import "src/assets/stylesheets/common.scss";
+@import "src/assets/stylesheets/mixins.scss";
+
+.business-form-signup {
+  z-index: 1;
+  position: relative;
+  top: 9.375rem;
+  margin-bottom: 14.375rem;
+  @include multiple-responsive(mobile, small-mobile, tablet, small-tablet) {
+    top: 5rem;
+    margin-bottom: 10.375rem;
+  }
+  &__background {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    width: 80%;
+    display: flex;
+
+    background-color: $pink;
+    border: 1px solid $yellow;
+    box-sizing: border-box;
+    border-radius: 20px;
+
+    @include multiple-responsive(mobile, small-mobile) {
+      flex-direction: column;
+      width: 95%;
+    }
+    @include multiple-responsive(tablet, small-tablet) {
+      width: 90%;
+    }
+  }
+  p {
+    margin: 18px 0;
+  }
+  &__overview {
+    width: 50%;
+    padding: 150px 25px 150px 75px;
+    @include multiple-responsive(mobile, small-mobile) {
+      width: 95%;
+      padding: 30px 10px 15px 10px;
+    }
+    @include multiple-responsive(tablet, small-tablet) {
+      padding: 70px 15px 70px 30px;
+    }
+    &__title {
+      @include text(Georgia-Bold, 1.875rem, $black, 2.75rem);
+    }
+    &__description {
+      @include text(ProximaNova-Regular, 1.125rem, $black, 1.6875rem);
+      ul {
+        li {
+          list-style-image: url("../../../../../assets/images/icons/tick.svg");
+        }
+      }
+    }
+  }
+  &__form {
+    width: 50%;
+    padding: 114px 75px 150px 25px;
+    @include multiple-responsive(mobile, small-mobile) {
+      width: 95%;
+      padding: 15px 10px 30px 10px;
+    }
+    @include multiple-responsive(tablet, small-tablet) {
+      padding: 70px 30px 70px 15px;
+    }
+    &--title {
+      @include text(Georgia-Bold, 1.5rem, $charcoal, 2.75rem);
+    }
+  }
+}

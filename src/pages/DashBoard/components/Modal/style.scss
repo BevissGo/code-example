@@ -1,0 +1,67 @@
+@import "src/assets/stylesheets/variables.scss";
+@import "src/assets/stylesheets/common.scss";
+@import "src/assets/stylesheets/mixins.scss";
+
+.business-change-password {
+  .ant-modal-content {
+    overflow: visible !important;
+    .ant-modal-close-x {
+      display: none;
+    }
+  }
+
+  &__body {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    padding: 60px 50px 46px 50px;
+    width: 723px;
+
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(69, 69, 69, 0.25);
+    box-sizing: border-box;
+    box-shadow: 5px 7px 15px -3px rgba(69, 69, 69, 0.25);
+    border-radius: 20px;
+
+    &__close {
+      position: relative;
+      &--icon {
+        position: absolute;
+        right: 0;
+        transform: translateY(-30px);
+        width: 25px;
+      }
+    }
+
+    &__title {
+      font-family: Georgia;
+      font-size: 30px;
+      text-align: center;
+    }
+    &__input-field {
+      padding-bottom: 15px;
+    }
+    .input-field {
+      .form-label {
+        @include text(ProximaNova-Regular, 15px, $charcoal, null);
+      }
+      ::placeholder {
+        @include text(ProximaNova-Regular, 15px, #c4c4c4, null);
+      }
+    }
+  }
+  &__footer {
+    display: flex;
+    justify-content: flex-end;
+
+    padding-top: 20px;
+    &--buttons {
+      display: flex;
+      justify-content: space-between;
+
+      width: 50%;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+.campaign-detail-modal {
+  &__body {
+    margin-top: 28px;
+
+    max-height: 50vh;
+    overflow: auto;
+  }
+}

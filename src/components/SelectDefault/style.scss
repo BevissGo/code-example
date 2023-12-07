@@ -1,0 +1,37 @@
+@import 'src/assets/stylesheets/common.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+@import 'src/assets/stylesheets/variables.scss';
+
+.select-default {
+  width: 270px;
+  position: relative;
+  background-color: white;
+
+  select {
+    @include text(ProximaNova-Regular, 1rem, $charcoal, null);
+    @include button(100%, 11px 22px 11px 21px, null, transparent);
+    z-index: 2;
+    appearance: none;
+    position: relative;
+    border-radius: 5px;
+    border: 1px solid $charcoal;
+
+    option {
+      color: $charcoal;
+    }
+  }
+  .angle-down {
+    right: 0;
+    top: 49%;
+    z-index: 1;
+    position: absolute;
+    background: geraldine;
+    @include text(null, 2rem, $charcoal, 0);
+    transform: translate(-25px, -50%) rotate(-90deg);
+  }
+  &.selected {
+    select {
+      color: $charcoal;
+    }
+  }
+}

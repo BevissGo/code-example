@@ -1,0 +1,223 @@
+.business-profile-page {
+  &__profile {
+    margin-top: 20px;
+    padding: 20px;
+
+    min-width: 320px;
+
+    background: #ffffff;
+    border-radius: 10px;
+  }
+
+  &__main-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__logo {
+    width: 142px;
+    height: 142px;
+    border-radius: 100%;
+  }
+
+  &__main-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+
+    width: 250px;
+    height: 108px;
+
+    border-bottom: 2px solid #e5e5e5;
+  }
+
+  &__name {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 120%;
+
+    color: black;
+  }
+
+  &__phone {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 120%;
+
+    margin-bottom: 8px;
+  }
+
+  &__website {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+  }
+
+  &__detailed-info {
+    margin-top: 20px;
+  }
+
+  &__email {
+    margin-bottom: 12px;
+
+    &-icon {
+      font-size: 16px;
+      color: #bebebe;
+    }
+
+    &-content {
+      margin-left: 6px;
+
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 120%;
+
+      color: black;
+    }
+  }
+
+  &__employee-quantity {
+    margin-bottom: 12px;
+
+    &-icon {
+      margin-left: 2px;
+
+      font-size: 16px;
+      color: #bebebe;
+    }
+
+    &-content {
+      margin-left: 10px;
+
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 120%;
+
+      color: black;
+    }
+  }
+
+  &__location {
+    margin-bottom: 12px;
+
+    &-icon {
+      margin-left: 2px;
+
+      font-size: 16px;
+      color: #bebebe;
+    }
+
+    &-content {
+      margin-left: 12px;
+
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 120%;
+
+      color: black;
+    }
+  }
+
+  &__work-day {
+    margin-bottom: 10px;
+
+    &-icon {
+      margin-left: 2px;
+
+      font-size: 16px;
+      color: #bebebe;
+    }
+
+    &-content {
+      margin-left: 10px;
+
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 120%;
+
+      color: black;
+    }
+  }
+
+  &__work-time {
+    margin-bottom: 10px;
+
+    &-icon {
+      font-size: 16px;
+      color: #bebebe;
+    }
+
+    &-content {
+      margin-left: 6px;
+
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 120%;
+
+      color: black;
+    }
+  }
+
+  &__description {
+    margin-bottom: 10px;
+
+    &-icon {
+      font-size: 16px;
+      color: #bebebe;
+    }
+
+    &-content {
+      margin-left: 6px;
+
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 120%;
+
+      color: black;
+    }
+  }
+
+  &__button-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 20px;
+  }
+
+  &__button-edit {
+    width: 250px;
+    height: 44px;
+
+    background-color: white;
+    border: 1px solid #5a5a5a;
+    border-radius: 10px;
+
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+
+    color: #2b2b2b;
+
+    &-icon {
+      margin-right: 8px;
+    }
+  }
+
+  &__button-edit:hover {
+    background-color: #dfdfdf;
+    border: none;
+  }
+}

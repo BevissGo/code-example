@@ -1,0 +1,26 @@
+@import 'src/assets/stylesheets/variables.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+
+.result-pass-and-fail {
+  &--pass {
+    @include text(Montserrat-Regular, 0.875rem, $black, null);
+    font-weight: 600;
+
+    padding: 4px 12px;
+    border-radius: 100px;
+
+    color: #3c773b;
+    background-color: #d1e9d7;
+  }
+
+  &--fail {
+    @include text(Montserrat-Regular, 0.875rem, $black, null);
+    font-weight: 600;
+
+    padding: 4px 12px;
+    border-radius: 100px;
+
+    color: #dc0c0a;
+    background-color: #ffd0ce;
+  }
+}

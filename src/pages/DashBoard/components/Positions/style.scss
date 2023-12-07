@@ -1,0 +1,117 @@
+.container-position-table {
+  margin: 30px;
+}
+
+.ant-table-thead > tr > th {
+  background: #ffffff !important;
+}
+
+.ant-pagination {
+  display: flex;
+  justify-content: center !important;
+}
+
+.ant-pagination-item-active {
+  font-weight: 500;
+  background: #4f2108 !important;
+  border-color: #4f2108 !important;
+  border-radius: 4px !important;
+
+  & > a {
+    color: #ffffff !important;
+  }
+
+  & > a:hover {
+    color: #ffffff !important;
+  }
+}
+
+.ant-pagination-disabled .ant-pagination-item-link,
+.ant-pagination-disabled:hover .ant-pagination-item-link,
+.ant-pagination-disabled:focus-visible .ant-pagination-item-link {
+  border-width: 0px !important;
+}
+
+.ant-pagination-prev .ant-pagination-item-link,
+.ant-pagination-next .ant-pagination-item-link {
+  border-width: 0px !important;
+}
+
+.ant-pagination-item {
+  border-width: 0;
+
+  & > a:hover {
+    color: #454545;
+  }
+}
+
+.ant-table-thead
+  > tr
+  > th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before {
+  background-color: #ffffff !important;
+}
+
+.ant-table-thead > tr > th {
+  font-family: ProximaNova !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-size: 15px !important;
+  line-height: 15px !important;
+  /* identical to box height */
+
+  letter-spacing: 1px !important;
+
+  color: #6a6a6a !important;
+}
+
+.ant-table-tbody > tr > td {
+  font-family: ProximaNova !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-size: 15px !important;
+  line-height: 15px !important;
+  /* identical to box height */
+
+  letter-spacing: 1px !important;
+
+  color: #454545 !important;
+  border-bottom: 1px solid #f0f0f0 !important;
+  transition: background 0.3s !important;
+}
+
+.table-test-link {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+
+  & > a {
+    font-family: ProximaNova-Regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 15px;
+    letter-spacing: 1px;
+    text-decoration-line: underline;
+    color: #454545;
+  }
+}
+
+@media only screen and (max-width: 1500px) {
+  .table-test-link {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 300px;
+    white-space: nowrap;
+
+    & > a {
+      font-family: ProximaNova-Regular;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 15px;
+      letter-spacing: 1px;
+      text-decoration-line: underline;
+      color: #454545;
+    }
+  }
+}

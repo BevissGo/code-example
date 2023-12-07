@@ -1,0 +1,17 @@
+@import 'src/assets/stylesheets/variables.scss';
+@import 'src/assets/stylesheets/common.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+
+.question {
+  @include flex(null, center, space-between);
+  margin-bottom: 15px;
+  @include multiple-responsive(small-mobile, mobile, small-tablet) {
+    display: block;
+  }
+  &__content {
+    @include text(ProximaNova-Regular, 1rem, $charcoal, null);
+    @include multiple-responsive(small-mobile, mobile, small-tablet) {
+      margin-bottom: 10px;
+    }
+  }
+}

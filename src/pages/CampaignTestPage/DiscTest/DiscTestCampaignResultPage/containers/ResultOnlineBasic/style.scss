@@ -1,0 +1,124 @@
+@import "src/assets/stylesheets/variables.scss";
+@import "src/assets/stylesheets/common.scss";
+@import "src/assets/stylesheets/mixins.scss";
+
+.result-online--basic {
+  // border-bottom: 1px solid $silver;
+  background: $white;
+
+  @include multiple-responsive(small-mobile, mobile) {
+    padding: 30px 15px;
+  }
+  @include multiple-responsive(small-tablet, tablet) {
+    padding: 40px 38px;
+  }
+  @include responsive(small-desktop) {
+    padding: 40px 56px;
+  }
+  @include responsive(medium-desktop) {
+    padding: 50px 86px;
+  }
+  @include responsive(medium-middle-desktop) {
+    padding: 80px 135px;
+  }
+  &__overview {
+    padding-bottom: 40px;
+    @include multiple-responsive(small-mobile, mobile, small-tablet) {
+      padding-bottom: 20px;
+    }
+    @include responsive(tablet) {
+      padding-bottom: 25px;
+    }
+    &__title {
+      font-weight: bold;
+      @include text(Georgia-Bold, 18px, $charcoal, null);
+      text-transform: uppercase;
+      padding-bottom: 20px;
+      @include multiple-responsive(small-mobile, mobile) {
+        padding-bottom: 15px;
+      }
+    }
+    &__meaning {
+      @include flex(null, null, space-between);
+      @include multiple-responsive(small-mobile, mobile) {
+        display: block;
+      }
+      div {
+        @include text(ProximaNova-Regular, 18px, $charcoal, 30px);
+        &.left {
+          padding-right: 65px;
+          @include multiple-responsive(small-mobile, mobile) {
+            padding: 0 0 15px;
+          }
+          @include responsive(small-tablet) {
+            padding-right: 20px;
+          }
+          @include responsive(tablet) {
+            padding-right: 30px;
+          }
+        }
+        &.right {
+          padding-left: 65px;
+          @include multiple-responsive(small-mobile, mobile) {
+            padding: 0;
+          }
+          @include responsive(small-tablet) {
+            padding-left: 20px;
+          }
+          @include responsive(tablet) {
+            padding-left: 30px;
+          }
+        }
+      }
+    }
+  }
+  &__list-chart {
+    @include flex(null, null, space-between);
+    @include multiple-responsive(small-mobile, mobile, small-tablet) {
+      display: block;
+    }
+    @include responsive(tablet) {
+      display: flex;
+    }
+  }
+  &__chart {
+    &--left,
+    &--right {
+      width: calc(50% - 65px);
+      @include multiple-responsive(small-mobile, mobile, small-tablet) {
+        width: 100%;
+      }
+      @include responsive(tablet) {
+        width: calc(50% - 30px);
+      }
+    }
+    &__title {
+      font-weight: bold;
+      @include text(Georgia-Bold, 18px, $charcoal, null);
+      padding-bottom: 6px;
+    }
+    &__subscription {
+      @include text(ProximaNova-Regular, 16px, $charcoal, null);
+      padding-bottom: 32px;
+      @include multiple-responsive(small-mobile, mobile) {
+        padding-bottom: 20px;
+      }
+    }
+  }
+  &__note {
+    list-style: inside;
+    @include text(ProximaNova-Regular, 18px, $charcoal, 30px);
+    @include multiple-responsive(small-mobile, mobile) {
+      padding-left: 20px;
+    }
+    @include multiple-responsive(small-tablet, tablet) {
+      padding-left: 40px;
+    }
+    @include responsive(small-desktop) {
+      padding-left: 50px;
+    }
+    @include responsive(medium-middle-desktop) {
+      padding-left: 100px;
+    }
+  }
+}

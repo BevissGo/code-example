@@ -1,0 +1,41 @@
+@import 'src/assets/stylesheets/variables.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+
+.custom-modal {
+  .ant-modal-header {
+    background-color: #eff0f4;
+    padding-bottom: 20px;
+
+    .ant-modal-title {
+      @include text(Montserrat-Bold, 1.25rem, $black, null);
+    }
+  }
+
+  .ant-modal-content {
+    padding: 30px;
+    background-color: #eff0f4;
+  }
+
+  .ant-modal-footer {
+    margin-top: 40px;
+  }
+
+  &--white {
+    .ant-modal-header {
+      background-color: #fff;
+      padding-bottom: 20px;
+
+      .ant-modal-title {
+        @include text(Montserrat-Bold, 1.25rem, $black, null);
+      }
+    }
+
+    .ant-modal-content {
+      background-color: #fff;
+    }
+
+    .ant-modal-footer {
+      margin-top: 40px;
+    }
+  }
+}

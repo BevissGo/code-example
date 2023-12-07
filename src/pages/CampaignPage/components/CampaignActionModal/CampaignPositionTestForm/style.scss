@@ -1,0 +1,45 @@
+@import 'src/assets/stylesheets/variables.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+
+.campaign-position-test-form {
+  &__title {
+    @include text(Montserrat-Bold, 1rem, $black, null);
+  }
+
+  &__warning {
+    @include text(Montserrat-Regular, 0.75rem, red, null);
+  }
+
+  &__require {
+    color: red;
+  }
+
+  &__delete-position-btn {
+    @include text(Montserrat-Regular, 0.875rem, $black, null);
+    font-weight: 600;
+
+    height: auto;
+    padding: 10px;
+    border: 1px solid #adadad;
+    background: transparent;
+  }
+
+  &__add-custom-test-btn {
+    @include text(Montserrat-Regular, 0.875rem, $white, null);
+    font-weight: 600;
+
+    height: auto;
+    padding: 10px;
+  }
+
+  &__checkbox-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+
+  .ant-select-selector {
+    min-height: 40px;
+  }
+}

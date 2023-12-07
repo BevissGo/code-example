@@ -1,0 +1,27 @@
+@import 'src/assets/stylesheets/variables.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+
+.campaign-page {
+  &__wrapper {
+    margin-top: 12px;
+  }
+
+  &__column-content {
+    &--bold {
+      @include text(Montserrat-Regular, 0.75rem, $black, null);
+      font-weight: 600;
+    }
+  }
+
+  &__column-status {
+    @include text(Montserrat-Regular, 0.875rem, $black, null);
+    font-weight: 600;
+
+    padding: 4px 12px;
+    border-radius: 100px;
+  }
+
+  &__dropdown-title {
+    font-weight: 500;
+  }
+}

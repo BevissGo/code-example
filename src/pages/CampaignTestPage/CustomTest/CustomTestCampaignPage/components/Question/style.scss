@@ -1,0 +1,31 @@
+@import 'src/assets/stylesheets/variables.scss';
+@import 'src/assets/stylesheets/common.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+
+.eq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include multiple-responsive(small-mobile, mobile, small-tablet, tablet) {
+    padding: 20px;
+    display: block
+  }
+
+  &__title {
+    @include text(Merriweather-Bold, 1rem, $charcoal, null);
+    line-height: 27px;
+    width: 548px;
+    margin-bottom: 15px;
+
+    @include multiple-responsive(small-mobile, mobile, small-tablet, tablet) {
+      display: block;
+      width: auto;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__content {
+    @include text(Merriweather-Regular, 1rem, $charcoal, null);
+  }
+}

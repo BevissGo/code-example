@@ -1,0 +1,27 @@
+@import 'src/assets/stylesheets/variables.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+
+.campaign-upload {
+  margin-bottom: 32px;
+
+  &__title {
+    @include text(Montserrat-Bold, 1rem, $black, null);
+  }
+
+  &__checkbox-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+
+  &__select-cv-cover-letter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .ant-form-item {
+    margin: 0;
+  }
+}

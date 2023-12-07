@@ -1,0 +1,165 @@
+@import 'src/assets/stylesheets/common.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+@import 'src/assets/stylesheets/variables.scss';
+
+$radius-mobile: 40px;
+$radius-tablet: 90px;
+$radius-desktop: 190px;
+$radius-small-tablet: 60px;
+$radius-small-mobile: 30px;
+$radius-small-desktop: 120px;
+$radius-medium-desktop: 150px;
+
+$listSize: (
+  'mobile': $radius-mobile,
+  'tablet': $radius-tablet,
+  'large-desktop': $radius-desktop,
+  'small-tablet': $radius-small-tablet,
+  'small-mobile': $radius-small-mobile,
+  'small-desktop': $radius-small-desktop,
+  'medium-desktop': $radius-medium-desktop,
+);
+
+$listColor: (
+  'green': $green,
+  'white': $white,
+  'spray': $spray,
+  'yellow': $yellow,
+  'chalky': $chalky,
+  'beauty-bush': $beauty-bush,
+  'bittersweet': $bittersweet,
+  'sherpa-blue-1': $sherpa-blue-1,
+);
+
+.background-page {
+  display: flex;
+  position: fixed;
+  overflow: hidden;
+  flex-direction: column;
+
+  @include multiple-responsive(small-mobile, mobile, small-tablet) {
+    top: 0;
+    right: 0;
+
+    &.signup {
+      padding: 22px 15px 15px;
+    }
+  }
+  @include responsive(tablet) {
+    top: 2.125rem;
+    right: 2.375rem;
+  }
+  @include responsive(small-desktop) {
+    top: 3.125rem;
+    right: 4.375rem;
+  }
+  @include responsive(medium-desktop) {
+    right: 5.375rem;
+  }
+  @include responsive(large-desktop) {
+    right: 8.4375rem;
+  }
+  &.signup {
+    left: 0;
+    right: 0;
+    padding: 0;
+    top: 8.5rem;
+  }
+  &.footer {
+    top: 0;
+    right: 0;
+    position: absolute;
+
+    @include multiple-responsive(small-mobile, mobile) {
+      transform: translate(0, 5.25rem);
+    }
+    @include multiple-responsive(small-tablet, tablet, small-desktop) {
+      transform: translate(0, 3.1875rem);
+    }
+    @include responsive(medium-middle-desktop) {
+      transform: translate(0, 6.25rem);
+    }
+  }
+  .push {
+    margin-left: auto;
+  }
+  .outline {
+    overflow: hidden;
+    @each $screen, $size in $listSize {
+      @include responsive($screen) {
+        @include square($size, null);
+      }
+    }
+    &.signup {
+      @include multiple-responsive(small-mobile, mobile) {
+        @include square(calc(25vw - 7.5px), null);
+      }
+    }
+    &--high {
+      @each $screen, $size in $listSize {
+        @include responsive($screen) {
+          height: $size * 2;
+        }
+      }
+      &.signup {
+        @include multiple-responsive(small-mobile, mobile) {
+          height: calc(50vw);
+        }
+      }
+    }
+    .circle {
+      border-radius: 50%;
+      &--full {
+        @each $screen, $size in $listSize {
+          @include responsive($screen) {
+            @include square($size, null);
+          }
+        }
+        &.signup {
+          @include multiple-responsive(small-mobile, mobile) {
+            @include square(calc((25vw - 7.5px)), null);
+          }
+        }
+      }
+      &--half {
+        @each $screen, $size in $listSize {
+          @include responsive($screen) {
+            @include square($size * 2, null);
+          }
+        }
+        &.signup {
+          @include multiple-responsive(small-mobile, mobile) {
+            @include square(calc(50vw - 15px), null);
+          }
+        }
+      }
+      &--quarter {
+        @each $screen, $size in $listSize {
+          @include responsive($screen) {
+            @include square($size * 2, null);
+          }
+        }
+        &.signup {
+          @include multiple-responsive(small-mobile, mobile) {
+            @include square(calc(50vw - 15px), null);
+          }
+        }
+      }
+    }
+    .background {
+      @each $name, $color in $listColor {
+        &--#{$name} {
+          background: $color;
+        }
+      }
+    }
+    .translate {
+      &--br {
+        transform: translate(-50%, 0%);
+      }
+      &--bl {
+        transform: translate(0%, -50%);
+      }
+    }
+  }
+}

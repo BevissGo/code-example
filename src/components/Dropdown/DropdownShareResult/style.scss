@@ -1,0 +1,65 @@
+@import 'src/assets/stylesheets/variables.scss';
+@import 'src/assets/stylesheets/common.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+
+.dropdown-share-result {
+  left: 0;
+  right: 0;
+  z-index: 1;
+  text-align: center;
+  width: fit-content;
+  position: absolute;
+  background: $white-smoke;
+  border: 1px solid $pink-3;
+  box-shadow: 5px 0px $pink-3;
+  border-radius: 0 0 1.25rem 1.25rem;
+
+  @include multiple-responsive(small-mobile, mobile) {
+    width: 220px;
+    margin-left: 15px;
+  }
+
+  @include multiple-responsive(small-tablet, tablet) {
+    width: 300px;
+    margin-left: 38px;
+  }
+
+  @include responsive(small-desktop) {
+    width: 300px;
+    margin-left: 56px;
+  }
+
+  @include multiple-responsive(medium-desktop, medium-middle-desktop) {
+    width: 400px;
+    margin-left: 86px;
+  }
+
+  @include responsive(large-desktop) {
+    width: 400px;
+    margin-left: 135px;
+  }
+
+  &__actions {
+    @include table();
+    padding: 10px;
+
+    li {
+      cursor: pointer;
+      min-width: 210px;
+      padding: 13px 10px;
+      margin: 0 !important;
+      @include text(ProximaNova-Regular, 1.5rem, null, 20px);
+
+      @include multiple-responsive(small-mobile, mobile) {
+        font-size: 1rem;
+        min-width: 110px;
+        padding: 10px 8px;
+      }
+
+      &:hover {
+        background: $romance;
+        text-decoration: underline;
+      }
+    }
+  }
+}

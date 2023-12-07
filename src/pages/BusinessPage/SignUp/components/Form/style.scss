@@ -1,0 +1,12 @@
+@import "src/assets/stylesheets/variables.scss";
+@import "src/assets/stylesheets/common.scss";
+@import "src/assets/stylesheets/mixins.scss";
+
+.btn {
+  background-color: $sherpa-blue-3;
+  color: #fff;
+  margin-top: 35px;
+  border-radius: 7px;
+  height: 44px;
+  width: 180px;
+}

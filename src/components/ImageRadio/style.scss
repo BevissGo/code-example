@@ -1,0 +1,46 @@
+@import 'src/assets/stylesheets/common.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+@import 'src/assets/stylesheets/variables.scss';
+
+.input-image-radio {
+  display: block;
+  margin-left: 20px;
+  position: relative;
+
+  &__checkmark {
+    position: absolute;
+    border: 1px solid $whisper;
+    @include square(20px, 50%);
+    &::after {
+      content: '';
+      margin: 4px;
+      display: none;
+      position: absolute;
+      background: $sherpa-blue-2;
+      @include square(12px, 50%);
+    }
+  }
+  &__label {
+    height: 20px;
+    padding-top: 4px;
+    margin-left: 35px;
+    @include text(ProximaNova-Regular, 1rem, $charcoal, null);
+  }
+  input {
+    margin: 0;
+    z-index: 2;
+    opacity: 0;
+    cursor: pointer;
+    position: absolute;
+    @include square(20px, null);
+
+    &:checked ~ .input-radio__checkmark {
+      &:after {
+        display: block;
+      }
+    }
+    &:disabled {
+      cursor: auto;
+    }
+  }
+}

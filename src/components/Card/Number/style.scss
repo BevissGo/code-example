@@ -1,0 +1,41 @@
+$white: #ffffff;
+$black: #000000;
+$gray-border: #e6e6e6;
+$gray-content-bg: #F2F2F7;
+$gray-text: #8C8C8C;
+$blue-light: #00AEEF;
+
+.number-card__wrapper {
+  .number-card {
+    background-color: white;
+    border-radius: 7px;
+    border: 1px solid $gray-border;
+    padding: 20px;
+    height: 100%;
+
+    .number-card {
+      &__title {
+        font-size: 18px;
+        margin-bottom: 7px;
+        line-height: 20px;
+      }
+
+      &__number {
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 37px;
+        margin-bottom: 12px;
+      }
+
+      &__des {
+        font-size: 15px;
+        line-height: 17px;
+      }
+    }
+
+    &:hover {
+      border: 1px solid $blue-light;
+      cursor: pointer;
+    }
+  }
+}

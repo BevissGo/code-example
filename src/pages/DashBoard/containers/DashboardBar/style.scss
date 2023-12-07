@@ -1,0 +1,20 @@
+@import 'src/assets/stylesheets/common.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+@import 'src/assets/stylesheets/variables.scss';
+
+.dashboard-bar {
+  @include flex(null, center, space-between);
+  padding-bottom: 20px;
+
+  &__title {
+    @include text(Montserrat-Bold, 1.75rem, $charcoal, null);
+  }
+
+  &__action {
+    display: flex;
+
+    .export-btn {
+      width: unset;
+    }
+  }
+}

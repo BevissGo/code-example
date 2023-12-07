@@ -1,0 +1,13 @@
+.campaign-candidate-list {
+  margin-top: 8px;
+
+  &__username {
+    font-weight: 600;
+  }
+
+  &__email {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

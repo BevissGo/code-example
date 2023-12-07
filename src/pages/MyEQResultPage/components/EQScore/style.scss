@@ -1,0 +1,56 @@
+@import 'src/assets/stylesheets/variables.scss';
+@import 'src/assets/stylesheets/common.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+
+.my-eq-result__eq-score {
+  &__container {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: normal;
+    &.great{
+      background: $spray;
+    }
+    &.high {
+      background: $dull-lavender;
+    }
+    &.middle {
+      background: $fejioa;
+    }
+    &.low {
+      background: $harvest-gold;
+    }
+    @include multiple-responsive(small-mobile, mobile) {
+      width: 220px;
+      height: 220px;
+    }
+  }
+  &__line {
+    transform: rotate(-45deg);
+    width: 230px;
+    border-top: 2px solid $charcoal;
+    @include multiple-responsive(small-mobile, mobile) {
+      width: 172px;
+    }
+  }
+  &__current {
+    @include text(Merriweather-Bold, 75px, $white, null);
+    padding-left: 25px;
+    @include multiple-responsive(small-mobile, mobile) {
+      padding-left: 12px;
+      font-size: 55px;
+    }
+  }
+  &__total {
+    @include text(Merriweather-Bold, 65px, $white, null);
+    padding-left: 90px;
+    @include multiple-responsive(small-mobile, mobile) {
+      padding-left: 85px;
+      font-size: 45px;
+    }
+  }
+}

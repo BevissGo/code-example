@@ -1,0 +1,16 @@
+@import 'src/assets/stylesheets/variables.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+
+.result-card-header {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid $grey-6;
+
+  &__title {
+    @include text(Montserrat-Bold, 1.25rem, $black, null);
+  }
+
+  &__time {
+    @include text(Montserrat-Regular, 0.75rem, $black, null);
+  }
+}

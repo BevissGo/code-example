@@ -1,0 +1,60 @@
+@import 'src/assets/stylesheets/variables.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+
+.campaign-information-form {
+  border-bottom: 1px solid $grey-6;
+
+  &__form-label {
+    @include text(Montserrat-Bold, 1rem, $black, null);
+    text-align: start;
+
+    min-width: 148px;
+
+    &--short {
+      @include text(Montserrat-Bold, 1rem, $black, null);
+      text-align: start;
+
+      min-width: 100px;
+    }
+  }
+
+  &__radio-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  &__radio {
+    &__text {
+      @include text(Montserrat-Regular, 0.875rem, $black, null);
+    }
+
+    &:nth-child(1) {
+      margin-right: 44px;
+    }
+  }
+
+  .ant-row {
+    .ant-col {
+      &:nth-child(1) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .ant-form-item-control-input {
+          border-bottom: 1px solid #9e9e9e;
+
+          input {
+            height: 40px;
+            padding: 0 8px;
+          }
+        }
+      }
+    }
+  }
+
+  .ant-picker {
+    height: 40px;
+    width: 100%;
+  }
+}

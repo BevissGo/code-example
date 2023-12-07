@@ -1,0 +1,168 @@
+@import 'src/assets/stylesheets/variables.scss';
+@import 'src/assets/stylesheets/common.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+
+.my-eq-result-page {
+  background: $romance;
+  position: relative;
+
+  &__title {
+    @include text(Georgia-Bold, 2.5rem, $charcoal, null);
+    text-align: center;
+    margin-bottom: 0.875rem;
+    @include multiple-responsive(small-mobile, mobile) {
+      padding-top: 82px;
+    }
+    @include multiple-responsive(small-tablet, tablet) {
+      padding-top: 109px;
+    }
+    @include responsive(small-desktop) {
+      padding-top: 149px;
+    }
+    @include responsive(medium-middle-desktop) {
+      padding-top: 159px;
+    }
+    @include responsive(large-desktop) {
+      padding-top: 169px;
+    }
+  }
+
+  &__tab {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 3rem;
+    margin-bottom: -1px;
+
+    @include multiple-responsive(small-mobile, mobile) {
+      padding: 0 15px;
+    }
+    @include multiple-responsive(small-tablet, tablet) {
+      padding: 0 38px;
+    }
+    @include responsive(small-desktop) {
+      padding: 0 56px;
+    }
+    @include multiple-responsive(medium-desktop, medium-middle-desktop) {
+      padding: 0 86px;
+    }
+    @include responsive(large-desktop) {
+      padding: 0 135px;
+    }
+
+    &__active {
+      @include text(ProximaNova-Bold, 1.5rem, $geraldine, 20px);
+      font-weight: bold;
+      background-color: $pink;
+      border: solid $pink-3 1px;
+      border-bottom: none;
+      border-top-left-radius: 1.25rem;
+      border-top-right-radius: 1.25rem;
+      padding: 1rem 0;
+      text-align: center;
+      box-shadow: 5px 0px $pink-3;
+      @include multiple-responsive(small-mobile, mobile) {
+        font-size: 1rem;
+        width: 220px;
+      }
+      @include multiple-responsive(small-tablet, tablet, small-desktop) {
+        width: 300px;
+      }
+      @include multiple-responsive(medium-desktop, medium-middle-desktop, large-desktop) {
+        width: 400px;
+      }
+
+      img {
+        margin-left: 10px;
+        width: 15px;
+      }
+      cursor: pointer;
+    }
+  }
+
+  &__content {
+    background-color: $pink;
+    margin-bottom: 6rem !important;
+    border-radius: 0 1.25rem 1.25rem 1.25rem;
+    border: solid $pink-3 1px;
+
+    @include text(ProximaNova-Regular, 1.25rem, $charcoal, 20px);
+    @include multiple-responsive(small-mobile, mobile) {
+      flex-direction: column;
+      padding: 80px 10px;
+      margin: 0 15px;
+    }
+    @include multiple-responsive(small-tablet, tablet) {
+      flex-direction: column;
+      padding: 80px 20px;
+      margin: 0 38px;
+    }
+    @include responsive(small-desktop) {
+      padding: 80px 20px;
+      margin: 0 56px;
+    }
+    @include responsive(medium-desktop) {
+      padding: 80px 20px;
+      margin: 0 86px;
+    }
+    @include responsive(medium-middle-desktop) {
+      padding: 80px 30px;
+      margin: 0 86px;
+    }
+    @include responsive(large-desktop) {
+      padding: 80px 30px;
+      margin: 0 135px;
+    }
+
+    &__empty-eq-result {
+      @include text(ProximaNova-Regular, 1.5rem, $grey-1, null);
+      margin-top: 6rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    &__testNow {
+      @include text(ProximaNova-Regular, 1.5rem, $grey-1, null);
+      text-align: center;
+    }
+
+    button {
+      margin: auto;
+      margin-top: 4rem;
+      display: flex;
+      margin-bottom: 6rem;
+    }
+  }
+
+  &__overview {
+    padding: 0 30px 60px;
+  }
+
+  &__subscription {
+    @include text(ProximaNova-Regular, 1.5rem, $charcoal, 2.1875rem);
+    margin-top: 65px;
+    margin-bottom: 60px;
+    @include multiple-responsive(small-mobile, mobile) {
+      font-size: 1.125rem;
+      line-height: 1.875rem;
+      margin: 30px 0;     
+    }
+    &__score-total {
+      @include text(ProximaNova-Bold, 1.5rem, $charcoal, null);
+    }
+  }
+
+  &__content {
+    &__title {
+      @include text(Merriweather-Bold, 2.5rem, $charcoal, null);
+      margin-bottom: 1.875rem;
+      @include multiple-responsive(small-mobile, mobile) {
+        font-size: 30px;
+      }
+    }
+    &__expanded-characteristic {
+      @include text(ProximaNova-Regular, 1.125rem, $charcoal, 1.6875rem);
+      margin-top: 30px;
+    }
+  }
+}

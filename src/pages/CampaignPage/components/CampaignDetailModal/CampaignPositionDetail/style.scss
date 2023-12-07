@@ -1,0 +1,17 @@
+@import 'src/assets/stylesheets/variables.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+
+.campaign-position-detail {
+  &__test-link {
+    margin: 0 8px;
+  }
+
+  &__expanded-text {
+    @include text(Montserrat-Regular, 0.875rem, $black, null);
+    font-weight: 600;
+
+    &:hover {
+      color: $dodger-blue;
+    }
+  }
+}

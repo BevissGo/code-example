@@ -1,0 +1,78 @@
+@import 'src/assets/stylesheets/variables.scss';
+@import 'src/assets/stylesheets/common.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+
+.result-online--expand {
+  border-bottom: 1px solid $silver;
+  @include multiple-responsive(small-mobile, mobile) {
+    padding: 30px 15px 10px;
+  }
+  @include multiple-responsive(small-tablet, tablet) {
+    padding: 40px 38px 20px;
+  }
+  @include responsive(small-desktop) {
+    padding: 40px 56px 10px;
+  }
+  @include responsive(medium-desktop) {
+    padding: 50px 86px 20px;
+  }
+  @include responsive(medium-middle-desktop) {
+    padding: 80px 135px 50px;
+  }
+  &__intro {
+    @include flex(null, null, space-between);
+    flex-wrap: wrap;
+    &__overview {
+      padding-bottom: 50px;
+      @include multiple-responsive(small-mobile, mobile, small-tablet) {
+        padding-bottom: 20px;
+        width: 100%;
+      }
+      @include responsive(tablet) {
+        padding-bottom: 25px;
+        width: calc(50% - 35px);
+      }
+      &__title {
+        @include text(Merriweather-Bold, 18px, $charcoal, null);
+        text-transform: uppercase;
+        padding-bottom: 20px;
+        @include multiple-responsive(small-mobile, mobile) {
+          padding-bottom: 15px;
+        }
+      }
+    }
+    &__chart {
+      margin: 0 auto;
+      width: calc(50% - 15px);
+      @include multiple-responsive(small-mobile, mobile, small-tablet) {
+        width: 100%;
+      }
+      @include responsive(tablet) {
+        width: calc(50% - 15px);
+      }
+      &__title {
+        @include text(Merriweather-Bold, 18px, $charcoal, null);
+        padding-bottom: 22px;
+      }
+    }
+  }
+  &__meaning-result {
+    &__title {
+      @include text(ProximaNova-Bold, 22px, $charcoal, null);
+      padding-bottom: 20px;
+    }
+    &__description {
+      padding-bottom: 30px;
+      @include text(ProximaNova-Regular, 18px, $charcoal, 30px);
+      width: calc(50% - 15px);
+      @include multiple-responsive(small-mobile, mobile, small-tablet) {
+        padding-bottom: 20px;
+        width: 100%;
+      }
+    }
+    &__list-description {
+      @include flex(null, null, space-between);
+      flex-wrap: wrap;
+    }
+  }
+}

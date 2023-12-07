@@ -1,0 +1,17 @@
+.horizontal-bar {
+  height: 30px;
+  display: flex;
+  justify-content: flex-end;
+
+  .horizontal-bar__label {
+    margin: auto 5px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 14px;
+
+    &.white {
+      color: white;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.wrapper-position {
+  &__flex-row-center {
+    display: flex;
+    flex-direction: row;
+
+    &>.container_position {
+      background: #FFFFFF;
+      margin-top: 30px;
+      border: 1px solid rgba(69, 69, 69, 0.5);
+      box-sizing: border-box;
+      border-radius: 25px;
+      height: max-content;
+    }
+  }
+
+  &__title-header-position {
+    font-family: ProximaNova-Bold;
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  &__divider {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(69, 69, 69, 0.25);
+    position: absolute;
+    left: 0;
+  }
+
+  &__container-logo {
+    width: 100%;
+    text-align: center;
+  }
+}

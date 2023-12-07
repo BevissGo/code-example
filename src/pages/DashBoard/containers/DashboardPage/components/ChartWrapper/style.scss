@@ -1,0 +1,15 @@
+@import 'src/assets/stylesheets/mixins.scss';
+
+.chart-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+
+  padding: 8px;
+
+  &__header {
+    @include text(Montserrat-Regular, 0.875rem, #000, null);
+    margin-bottom: 20px;
+  }
+}

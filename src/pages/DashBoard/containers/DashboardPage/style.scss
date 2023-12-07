@@ -1,0 +1,19 @@
+.dashboard-page {
+  &__header {
+    display: flex;
+    flex-direction: row;
+
+    margin: 0 -10px;
+
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  &__select-time {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: flex-end;
+
+    margin-top: 12px;
+  }
+}

@@ -1,0 +1,33 @@
+$yello-text: #F4DBA4;
+
+.rounded-score__container {
+  display: flex;
+  justify-content: center;
+
+  .rounded-score {
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    background-color: green;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    .rounded-score__inner {
+      .score {
+        color: white;
+        font-size: 30px;
+        line-height: 0.8;
+        font-weight: bold;
+      }
+
+      .max-score {
+        color: $yello-text;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: end;
+      }
+    }
+  }
+}

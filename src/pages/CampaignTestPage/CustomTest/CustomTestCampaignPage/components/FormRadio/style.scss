@@ -1,0 +1,18 @@
+@import 'src/assets/stylesheets/variables.scss';
+@import 'src/assets/stylesheets/common.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+
+.custom-test {
+  .form-radio {
+    display: block;
+    margin-left: 0px;
+
+    @include multiple-responsive(small-mobile, mobile, small-tablet) {
+      margin-left: 0;
+
+      .input-radio:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}

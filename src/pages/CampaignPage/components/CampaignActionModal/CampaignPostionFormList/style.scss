@@ -1,0 +1,8 @@
+@import 'src/assets/stylesheets/variables.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+
+.campaign-position-form-list {
+  .ant-card-body {
+    padding: 32px 0;
+  }
+}

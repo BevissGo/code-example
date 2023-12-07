@@ -1,0 +1,92 @@
+@import 'src/assets/stylesheets/common.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+@import 'src/assets/stylesheets/variables.scss';
+
+.button-arrow {
+  position: relative;
+  @include flex(null, center, center);
+  @include text(ProximaNova-Regular, 1rem, $white, null);
+  @include button(170px, 15px 20px, 25px, $sherpa-blue-1);
+
+  &:disabled {
+    opacity: 0.8;
+    cursor: default;
+  }
+  &.survey {
+    width: 230px;
+    @include multiple-responsive(small-mobile, mobile, small-tablet) {
+      width: auto;
+      padding: 12px 26px;
+      text-align: center;
+      .button-arrow__name {
+        width: 100%;
+      }
+      .right {
+        display: none;
+      }
+    }
+  }
+  &.transparent {
+    padding: 0;
+    color: $sherpa-blue-1;
+    @include button(auto, null, 4px, $white);
+
+    .button-arrow__name {
+      margin-left: 20px;
+    }
+    .arrow {
+      transform: rotate(0deg);
+    }
+  }
+  &.signUp {
+    height: 44px;
+    width: 180px;
+  }
+  &.businessSignUp {
+    height: 44px;
+    width: 180px;
+    margin-top: 35px;
+    border-radius: 7px;
+    background-color: $sherpa-blue-3;
+
+    &__name {
+      @include text(ProximaNova-Regular, 1rem, #fff, 1.6875rem);
+    }
+    .arrow {
+      padding-right: 10px;
+    }
+  }
+  @include multiple-responsive(small-mobile, mobile) {
+    padding: 12px 13px;
+  }
+  @include responsive(small-mobile) {
+    font-size: 0.875rem;
+  }
+  .arrow {
+    font-weight: 100;
+    padding-right: 10px;
+    transform: rotate(180deg);
+    @include flex(null, center, null);
+    img {
+      width: 17px;
+    }
+  }
+
+  img.icon-loading {
+    display: none;
+  }
+
+  img.icon-loading {
+    top: 50%;
+    right: 5px;
+    width: 24px;
+    height: 24px;
+    display: block;
+    position: absolute;
+    @include rotate(2s linear infinite);
+
+    @include multiple-responsive(small-mobile, mobile) {
+      right: 0;
+    }
+  }
+}

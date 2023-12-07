@@ -1,0 +1,58 @@
+@import 'src/assets/stylesheets/common.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+@import 'src/assets/stylesheets/variables.scss';
+
+.profile-mini {
+  display: flex;
+
+  align-items: center;
+  margin-top: 4px;
+
+  &.opened {
+    pointer-events: none;
+  }
+
+  @include multiple-responsive(small-mobile, mobile, small-tablet, tablet) {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    justify-content: flex-end;
+  }
+
+  @include multiple-responsive(small-desktop) {
+    padding-left: 50px;
+  }
+
+  @include multiple-responsive(medium-desktop) {
+    padding-left: 65px;
+  }
+
+  &__avatar {
+    @include square(58px, 50%);
+    cursor: pointer;
+    margin-left: 12px;
+  }
+
+  p {
+    @include text(Montserrat-Bold, 18px, $charcoal, null);
+    cursor: pointer;
+
+    @include multiple-responsive(small-desktop) {
+      font-size: 16px;
+    }
+
+    @include multiple-responsive(medium-desktop) {
+      font-size: 18px;
+    }
+
+    img {
+      width: 10px;
+      margin-left: 8px;
+      display: block;
+
+      @include multiple-responsive(small-mobile, mobile, small-tablet, tablet) {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+@import 'src/assets/stylesheets/variables.scss';
+@import 'src/assets/stylesheets/common.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+
+.confirm-modal {
+  @include text(ProximaNova-Regular, 15px, $black, null);
+
+  .modal-action-buttons-group {
+    @include flex(row, flex-start, flex-end);
+    margin-top: 1rem;
+
+    > * {
+      flex: 1;
+    }
+
+    :not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+}

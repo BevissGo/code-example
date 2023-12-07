@@ -1,0 +1,72 @@
+@import 'src/assets/stylesheets/common.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+@import 'src/assets/stylesheets/variables.scss';
+
+.card-blog {
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 20px;
+  text-align: justify;
+  box-shadow: 0 0 2.5px 0.25px #aaa;
+
+  &.blog-page {
+    margin-left: 15px;
+    margin-right: 15px;
+    @include multiple-responsive(small-mobile, mobile) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+  .view-detail-blog {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+      text-decoration-color: $charcoal;
+    }
+  }
+  .card-blog__thumbnail {
+    width: 100%;
+    display: flex;
+    height: 240px;
+    margin-bottom: 0;
+    align-items: center;
+    justify-content: center;
+
+    @include responsive(small-desktop) {
+      height: 220px;
+    }
+    @include responsive(medium-desktop) {
+      height: 240px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 20px 20px00;
+    }
+  }
+  &__content {
+    padding: 20px;
+    min-height: 50%;
+    background-color: #fff;
+    border-top: solid 0.5px #aaa;
+    border-radius: 0 0 20px 20px;
+  }
+  &__title {
+    padding-bottom: 14px;
+    @include text(Merriweather-Bold, 1.125rem, $charcoal, 1.6875rem);
+
+    @include multiple-responsive(small-mobile, mobile) {
+      padding-bottom: 8px;
+    }
+    @include multiple-responsive(small-tablet) {
+      line-height: 1.375rem;
+    }
+  }
+  &__description {
+    @include text(ProximaNova-Regular, 0.875rem, $charcoal, 1.25rem);
+  }
+  &__date {
+    @include text(ProximaNova-Regular, 0.875rem, $charcoal, 1.25rem);
+  }
+}

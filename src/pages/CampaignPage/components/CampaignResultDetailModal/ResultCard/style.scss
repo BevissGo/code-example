@@ -1,0 +1,23 @@
+@import 'src/assets/stylesheets/variables.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+
+.result-card {
+  height: 100%;
+  padding: 20px;
+
+  background-color: white;
+  border-radius: 20px;
+
+  &__label {
+    @include text(Montserrat-Regular, 0.875rem, $black, null);
+  }
+
+  &__value {
+    @include text(Montserrat-Regular, 1rem, $black, null);
+    font-weight: 600;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}

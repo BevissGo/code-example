@@ -1,0 +1,49 @@
+@import 'src/assets/stylesheets/common.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+@import 'src/assets/stylesheets/variables.scss';
+
+.card-blog-related {
+  display: flex;
+  text-align: justify;
+  justify-content: flex-start;
+
+  img {
+    width: 270px;
+    height: 175px;
+    object-fit: cover;
+    border-radius: 10px;
+
+    @include multiple-responsive(small-mobile, mobile) {
+      width: 150px;
+      height: 100px;
+    }
+  }
+  &__left {
+    margin-left: 10px;
+    &__title {
+      margin-right: 30px;
+      padding-bottom: 9px;
+      @include text(Georgia-Bold, 1.25rem, $charcoal, null);
+
+      @include multiple-responsive(small-mobile, mobile) {
+        margin-right: 0;
+      }
+    }
+    &__description {
+      margin-top: 10px;
+      @include text(ProximaNova-Regular, 1.125rem, $charcoal, 1.625rem);
+
+      @include multiple-responsive(small-mobile, mobile) {
+        margin-right: 0;
+      }
+      @include multiple-responsive(small-tablet, tablet) {
+        margin-right: 30px;
+      }
+    }
+    &__date {
+      margin-top: 10px;
+      color: gainsboro;
+      @include text(ProximaNova-Regular, 1.125rem, $charcoal, null);
+    }
+  }
+}

@@ -1,0 +1,18 @@
+@import 'src/assets/stylesheets/variables.scss';
+@import 'src/assets/stylesheets/common.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+
+.group-question {
+  padding: 20px 40px;
+  border-bottom: 1px solid $whisper;
+  @include multiple-responsive(small-mobile, mobile) {
+    padding: 20px;
+  }
+  &__title {
+    @include text(Merriweather-Bold, 1rem, $charcoal, null);
+    margin-bottom: 15px;
+  }
+  .question:last-child {
+    margin-bottom: 0;
+  }
+}

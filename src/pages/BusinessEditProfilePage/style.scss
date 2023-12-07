@@ -1,0 +1,57 @@
+.business-edit-profile-page {
+  &__button-group {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+
+    width: 308px;
+    height: 58px;
+  }
+
+  &__button-cancel {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 14px 40px;
+    gap: 5px;
+
+    width: 142px;
+    height: 58px;
+
+    background: #f2f2f7;
+    border: none;
+    border-radius: 40px;
+
+    &-text {
+      font-weight: 600;
+      font-size: 16px;
+
+      color: #555555;
+    }
+  }
+
+  &__button-update {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 14px 50px;
+
+    width: 166px;
+    height: 58px;
+
+    background: #1677ff;
+    border-radius: 40px;
+
+    &-text {
+      font-weight: 600;
+      font-size: 16px;
+
+      color: white;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+@import 'src/assets/stylesheets/variables.scss';
+@import 'src/assets/stylesheets/common.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+
+.survey-page {
+  background: $pink;
+  position: relative;
+  min-height: var(--app-height);
+  overflow: hidden;
+}

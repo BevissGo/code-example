@@ -1,0 +1,28 @@
+.business-profile-quantity-show {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0px 24px;
+
+  width: 33.33333%;
+  height: 120px;
+
+  border-radius: 5px;
+  border-top: 6px solid #5a5a5a;
+
+  &__title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21.6px;
+  }
+
+  &__quantity {
+    margin-top: 8px;
+
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 120%;
+  }
+}

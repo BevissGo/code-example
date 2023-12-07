@@ -1,0 +1,21 @@
+@import 'src/assets/stylesheets/common.scss';
+@import 'src/assets/stylesheets/variables.scss';
+
+.input-default {
+  padding: 1.25rem;
+  border-bottom: 1px solid $gainsboro;
+
+  input {
+    @include input(100%, null, 0, transparent);
+    @include text(ProximaNova-Regular, 1rem, $charcoal, null);
+    &::placeholder {
+      color: $nobel;
+    }
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+      box-shadow: 0 0 0 30px white inset !important;
+    }
+  }
+}

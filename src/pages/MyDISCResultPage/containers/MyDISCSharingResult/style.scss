@@ -1,0 +1,99 @@
+@import 'src/assets/stylesheets/variables.scss';
+@import 'src/assets/stylesheets/common.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+
+.my-disc-sharing-result {
+  background: $pink;
+  border-top: 1px solid $silver;
+  margin-bottom: 6rem;
+  @include flex(column, center, null);
+  @include multiple-responsive(small-mobile, mobile) {
+    padding: 30px 15px;
+    // display: block;
+  }
+  @include multiple-responsive(small-tablet, tablet) {
+    padding: 40px 38px;
+  }
+  @include responsive(small-desktop) {
+    padding: 40px 56px;
+  }
+  @include responsive(medium-desktop) {
+    padding: 50px 86px;
+  }
+  @include responsive(medium-middle-desktop) {
+    padding: 80px 135px;
+  }
+  &--copy-link {
+    &__container {
+      @include flex(null, center, null);
+      width: fit-content;
+      padding: 12px 15px;
+      background: $white;
+      border-radius: 4px;
+      border: 1px solid $gainsboro;
+      p {
+        @include text(ProximaNova-Regular, 14px, $matterhorn, null);
+        max-width: 250px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        margin-right: 5px;
+        @include multiple-responsive(small-mobile) {
+          max-width: 180px;
+        }
+        @include multiple-responsive(mobile) {
+          max-width: 200px;
+        }
+      }
+      button {
+        @include text(ProximaNova-Regular, 12px, $matterhorn, null);
+        @include button(null, 8px 15px, 18px, $white);
+        height: fit-content;
+        border: 1px solid $gainsboro;
+      }
+    }
+  }
+  &--social {
+    text-align: center;
+    img {
+      width: 30px;
+    }
+  }
+  &__title {
+    @include text(Merriweather-Bold, 40px, $charcoal, null);
+    text-align: center;
+    padding-bottom: 45px;
+    @include multiple-responsive(small-mobile, mobile) {
+      font-size: 30px;
+      padding-bottom: 25px;
+    }
+  }
+  &__sub-title {
+    width: 100%;
+    @include text(ProximaNova-Bold, 16px, $matterhorn, null);
+    padding-bottom: 15px;
+  }
+  &__background {
+    max-width: 370px;
+  }
+  &__or {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    @include flex(null, null, center);
+    position: relative;
+    span {
+      @include text(ProximaNova-Regular, 14px, $matterhorn, null);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: $white-smoke;
+      padding: 0 5px;
+    }
+    .line {
+      height: 1px;
+      width: 100%;
+      background: $gainsboro;
+    }
+  }
+}

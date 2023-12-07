@@ -1,0 +1,36 @@
+@import 'src/assets/stylesheets/common.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+@import 'src/assets/stylesheets/variables.scss';
+
+.card-blog-small {
+  display: flex;
+  justify-content: flex-start;
+
+  img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 1.5rem;
+    box-shadow: 0 0 2.5px 0.25px #aaa;
+  }
+  &__title {
+    margin-right: 30px;
+    padding-bottom: 9px;
+    @include text(ProximaNova-Bold, 1.125rem, $charcoal, 24px);
+
+    @include multiple-responsive(small-mobile, mobile) {
+      margin-right: 0;
+    }
+  }
+  &__description {
+    color: #9f9f9f;
+    @include text(ProximaNova-Regular, 0.875rem, $charcoal, 1.25rem);
+
+    @include multiple-responsive(small-tablet, tablet) {
+      margin-right: 30px;
+    }
+  }
+  &__writer {
+    @include text(ProximaNova-Regular, 0.875rem, $charcoal, 20px);
+  }
+}

@@ -1,0 +1,17 @@
+@import 'src/assets/stylesheets/variables.scss';
+@import 'src/assets/stylesheets/common.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+
+.progress-bar {
+  height: 8px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  width: 100vw;
+  &__bar {
+    transition: width 500ms;
+    background: $sherpa-blue-1;
+    height: 8px;
+  }
+}

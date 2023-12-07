@@ -1,0 +1,6 @@
+@import 'src/assets/stylesheets/variables.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+
+.warning-using-modal {
+  @include text(Montserrat-Regular, 1rem, $black, null);
+}

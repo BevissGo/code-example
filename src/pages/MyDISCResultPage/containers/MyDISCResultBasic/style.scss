@@ -1,0 +1,88 @@
+@import "src/assets/stylesheets/variables.scss";
+@import "src/assets/stylesheets/common.scss";
+@import "src/assets/stylesheets/mixins.scss";
+
+.my-disc-result-basic {
+  background-color: $pink;
+  border-bottom-left-radius: 1.25rem;
+  border-bottom-right-radius: 1.25rem;
+  border: solid $pink-3 1px;
+  border-top: none;
+  @include multiple-responsive(small-mobile, mobile) {
+    padding: 30px 20px;
+    margin: 0 15px;
+  }
+  @include multiple-responsive(small-tablet, tablet) {
+    flex-direction: column;
+    padding: 30px 20px 40px;
+    margin: 0 38px;
+  }
+  @include responsive(small-desktop) {
+    padding: 30px 30px 40px;
+    margin: 0 56px;
+  }
+  @include responsive(medium-desktop) {
+    padding: 30px 30px 50px;
+    margin: 0 86px;
+  }
+  @include responsive(medium-middle-desktop) {
+    padding: 30px 40px 80px;
+    margin: 0 86px;
+  }
+  @include responsive(large-desktop) {
+    padding: 30px 40px 80px;
+    margin: 0 135px;
+  }
+  &__overview {
+    padding-bottom: 50px;
+    @include multiple-responsive(small-mobile, mobile, small-tablet) {
+      padding-bottom: 20px;
+    }
+    @include responsive(tablet) {
+      padding-bottom: 25px;
+    }
+    &__title {
+      font-weight: bold;
+      @include text(Georgia-Bold, 20px, $charcoal, null);
+      text-transform: uppercase;
+      padding-bottom: 20px;
+      @include multiple-responsive(small-mobile, mobile) {
+        padding-bottom: 15px;
+      }
+    }
+    &__body {
+      margin-bottom: 40px;
+      @include flex(null, null, space-between);
+      @include multiple-responsive(small-mobile, mobile) {
+        display: block;
+      }
+      div {
+        background-image: linear-gradient(#9ca1a6, #bdc2c7, #d6d6d6);
+        background-repeat: repeat;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        @include text(ProximaNova-Regular, 18px, $charcoal, 30px);
+        &.left {
+          padding-right: 65px;
+          @include multiple-responsive(small-mobile, mobile) {
+            padding: 0 0 15px;
+          }
+          @include responsive(small-tablet) {
+            padding-right: 20px;
+          }
+          @include responsive(tablet) {
+            padding-right: 30px;
+          }
+        }
+      }
+    }
+    &__summary {
+      @include multiple-responsive(small-mobile, mobile) {
+        display: block;
+      }
+      div {
+        @include text(ProximaNova-Regular, 18px, $charcoal, 30px);
+      }
+    }
+  }
+}

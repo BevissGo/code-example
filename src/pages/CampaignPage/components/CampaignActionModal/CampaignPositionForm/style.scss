@@ -1,0 +1,39 @@
+@import 'src/assets/stylesheets/variables.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+
+.campaign-position-form {
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 4px;
+
+  &__form-label {
+    @include text(Montserrat-Bold, 1rem, $black, null);
+    text-align: start;
+
+    min-width: 128px;
+
+    &--short {
+      @include text(Montserrat-Bold, 1rem, $black, null);
+      text-align: start;
+
+      min-width: 100px;
+    }
+  }
+
+  &__input-number {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    height: 40px;
+    width: 108%;
+  }
+
+  .ant-row {
+    .ant-col {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+  }
+}

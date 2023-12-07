@@ -1,0 +1,19 @@
+@import 'src/assets/stylesheets/common.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+@import 'src/assets/stylesheets/variables.scss';
+
+.line-chart {
+  margin-left: -6px;
+  @include multiple-responsive(small-mobile, mobile) {
+    padding-bottom: 30px;
+  }
+  @include multiple-responsive(small-tablet, tablet, small-desktop) {
+    padding-bottom: 40px;
+  }
+  @include responsive(medium-desktop) {
+    padding-bottom: 50px;
+  }
+  @include responsive(medium-middle-desktop) {
+    padding-bottom: 80px;
+  }
+}

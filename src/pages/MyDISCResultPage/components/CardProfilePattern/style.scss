@@ -1,0 +1,36 @@
+@import 'src/assets/stylesheets/variables.scss';
+@import 'src/assets/stylesheets/common.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+
+.profile-example {
+  max-width: 570px;
+  @include multiple-responsive(small-mobile, mobile, small-tablet) {
+    max-width: 100%;
+  }
+  img {
+    width: 100%;
+    @include multiple-responsive(small-mobile, mobile) {
+      height: 240px;
+      padding-bottom: 15px;
+    }
+    @include responsive(small-tablet) {
+      height: 280px;
+      padding-bottom: 15px;
+    }
+    @include responsive(tablet) {
+      height: 240px;
+      padding-bottom: 20px;
+    }
+    @include responsive(small-desktop) {
+      height: 320px;
+      padding-bottom: 30px;
+    }
+  }
+  &__name {
+    @include text(ProximaNova-Bold, 22px, $charcoal, null);
+    padding-bottom: 8px;
+  }
+  &__major {
+    @include text(ProximaNova-Regular, 18px, $charcoal, null);
+  }
+}

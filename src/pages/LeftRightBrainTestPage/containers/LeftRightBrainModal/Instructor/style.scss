@@ -1,0 +1,80 @@
+@import 'src/assets/stylesheets/variables.scss';
+@import 'src/assets/stylesheets/common.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+
+.lr-brain-modal-instructor {
+  position: relative;
+  background: $white;
+  max-width: 770px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: fit-content;
+  margin: 160px auto 62px auto;
+  border-radius: 0.9375rem;
+  @include multiple-responsive(small-mobile, mobile, small-tablet, tablet) {
+    margin-top: 80px;
+  }
+  @include multiple-responsive(small-mobile, mobile) {
+    margin-left: 0.9375rem;
+    margin-right: 0.9375rem;
+  }
+  @include multiple-responsive(small-tablet, tablet) {
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+
+  &__header {
+    @include text(Georgia-Bold, 2.5rem, $charcoal, null);
+    // padding-top: 3.125rem;
+    // padding-left: 3.125rem;
+    // padding-bottom: 1.25rem;
+    box-sizing: content-box;
+    padding: 3.125rem 3.125rem 1.25rem;
+    width: 30rem;
+    max-width: fit-content;
+    @include multiple-responsive(small-mobile, mobile) {
+      // padding-bottom: 0.625rem;
+      // padding-top: 1.25rem;
+      // padding-left: 1.25rem;
+      padding: 1.25rem 1.25rem 0.625rem 1.25rem;
+      font-size: 1.75rem;
+      height: auto;
+      line-height: normal;
+      width: fit-content;
+    }
+  }
+  &__body {
+    @include text(ProximaNova-Regular, 1.125rem, $charcoal, 1.25rem);
+    padding-left: 3.125rem;
+    padding-right: 3.125rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid $whisper;
+    @include multiple-responsive(small-mobile, mobile) {
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+      padding-bottom: 1.25rem;
+    }
+
+    &__exam_structure {
+      @include text(ProximaNova-Bold, 1.125rem, $charcoal, null);
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      padding-left: 28px;
+    }
+  }
+  &__footer {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    margin: auto;
+    @include flex(null, null, center);
+    @include multiple-responsive(small-mobile, mobile) {
+      padding-bottom: 1.25rem;
+      padding-top: 1.25rem;
+    }
+  }
+}

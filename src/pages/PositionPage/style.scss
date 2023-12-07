@@ -1,0 +1,41 @@
+@import 'src/assets/stylesheets/variables.scss';
+@import 'src/assets/stylesheets/common.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+
+.position-page {
+  &__create-btn {
+    @include text(Montserrat-Regular, 0.875rem, $white, null);
+    font-weight: 600;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    height: auto;
+    padding: 8px 12px;
+    border-radius: 10px;
+    background-color: $black;
+  }
+
+  &__wrapper {
+    margin-top: 12px;
+  }
+
+  &__column-content {
+    max-width: 480px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &--bold {
+      @include text(Montserrat-Regular, 0.875rem, $black, null);
+      font-weight: 600;
+
+      max-width: 200px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+@import "src/assets/stylesheets/variables.scss";
+@import "src/assets/stylesheets/common.scss";
+@import "src/assets/stylesheets/mixins.scss";
+
+.business-form-signin {
+  padding: 45px 70px 55px 70px;
+  @include multiple-responsive(small-mobile, mobile) {
+    padding: 30px;
+  }
+  p {
+    margin: 18px 0;
+  }
+  &__title {
+    @include text(Georgia-Bold, 1.875rem, $charcoal, 2.75rem);
+  }
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    @include multiple-responsive(small-mobile, mobile) {
+      flex-direction: column;
+    }
+    &--password {
+      @include text(Georgia, 1rem, #6a6a6a, null);
+      padding-top: 35px;
+      @include multiple-responsive(small-mobile, mobile) {
+        padding-top: 25px;
+        padding-left: 10px;
+      }
+      p {
+        cursor: pointer;
+      }
+    }
+  }
+}

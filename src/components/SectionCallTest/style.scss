@@ -1,0 +1,90 @@
+@import 'src/assets/stylesheets/common.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+@import 'src/assets/stylesheets/variables.scss';
+
+.section-call-test {
+  margin-top: 75px;
+  position: relative;
+  background-color: #fff4e5;
+  border-bottom: 1px solid $silver;
+
+  .call-test-disc {
+    width: 100%;
+    max-width: none;
+    padding-bottom: 0;
+    .process-disc__container {
+      display: flex;
+      justify-content: space-around;
+
+      @include multiple-responsive(small-mobile, mobile) {
+        padding: 56px 15px 0;
+        flex-direction: column;
+      }
+      @include multiple-responsive(small-tablet, tablet) {
+        padding: 56px 38px 0;
+        flex-direction: column;
+      }
+      @include responsive(small-desktop) {
+        padding-left: 56px;
+        padding-top: 107px;
+        padding-right: 56px;
+      }
+      @include responsive(medium-desktop) {
+        padding-left: 86px;
+        padding-right: 86px;
+      }
+      padding-top: 107px;
+      @include responsive(medium-middle-desktop) {
+        padding-top: 147px;
+        padding-left: 135px;
+      }
+      padding-right: 135px;
+    }
+    .process-disc__right,
+    .process-disc__left {
+      width: 40%;
+      position: unset;
+      border-radius: 20px;
+      background-color: $romance;
+      padding: 2.5rem 2.5rem 4rem;
+
+      @include multiple-responsive(small-mobile, mobile) {
+        width: auto;
+        display: block;
+        position: unset;
+        margin-top: 15px;
+      }
+      @include multiple-responsive(small-tablet, tablet) {
+        width: auto;
+        position: unset;
+        margin-top: 15px;
+      }
+      .disc__button-section {
+        z-index: 1;
+        position: absolute;
+      }
+    }
+  }
+
+  .img-choiceicon {
+    display: flex;
+    position: inherit;
+    margin-top: -150px;
+    margin-left: -20px;
+    justify-content: center;
+
+    @include multiple-responsive(small-mobile, mobile) {
+      margin-left: 0;
+      position: unset;
+      margin-top: 15px;
+    }
+    @include multiple-responsive(small-tablet, tablet) {
+      margin-left: 0;
+      position: unset;
+      margin-top: 15px;
+    }
+    img {
+      width: 350px;
+    }
+  }
+}

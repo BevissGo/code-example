@@ -1,0 +1,92 @@
+@import "src/assets/stylesheets/variables.scss";
+@import "src/assets/stylesheets/common.scss";
+@import "src/assets/stylesheets/mixins.scss";
+
+.buy-premium-banner {
+  background-color: $heavy-peach;
+  display: flex;
+  flex-wrap: wrap;
+  @include multiple-responsive(small-mobile, mobile) {
+    padding: 20px 15px 10px;
+    flex-direction: column-reverse;
+  }
+  @include multiple-responsive(small-tablet, tablet) {
+    padding: 30px 38px 10px;
+    flex-direction: column-reverse;
+  }
+  @include responsive(small-desktop) {
+    padding: 35px 56px 10px;
+  }
+  @include responsive(medium-desktop) {
+    padding: 35px 86px;
+  }
+  @include responsive(medium-middle-desktop) {
+    padding: 40px 135px;
+  }
+
+  &__text-section {
+    width: calc(50% - 6.375rem);
+    padding-right: 6.375rem;
+    @include multiple-responsive(small-mobile, mobile) {
+      padding-right: 0;
+      width: 100%;
+    }
+    @include multiple-responsive(small-tablet, tablet) {
+      padding-right: 0;
+      width: 100%;
+    }
+
+    &--title {
+      font-family: Georgia-Bold;
+      font-size: 2.5rem;
+      line-height: 1.53;
+      margin-top: 0;      
+      margin-bottom: 1rem;      
+    }
+
+    &--description {
+      // margin: 15px 0 30px;
+      font-family: ProximaNova-Regular;
+      font-size: 1.125rem;
+      line-height: 1.33;
+    }
+
+    &--button-section {
+      margin-top: 30px;
+      height: 3.125rem;
+    }
+  }
+
+  &__image-section {
+    position: relative;
+    width: 50%;
+    @include multiple-responsive(small-mobile, mobile) {
+      width: 100%;
+    }
+    @include multiple-responsive(small-tablet, tablet) {
+      width: 100%;
+    }
+    &--image {
+      width: 100%;
+      height: auto;
+      position: absolute;
+      // max-width: 552px;
+      left: 50%;
+      margin-left: -50%;
+      top: 50%;
+      transform: translateY(-50%);
+      @include multiple-responsive(small-mobile, mobile) {
+        position: static;
+        margin-left: 0;
+        transform: translateY(0);
+        margin-bottom: 40px;
+      }
+      @include multiple-responsive(small-tablet, tablet) {
+        position: static;
+        margin-left: 0;
+        transform: translateY(0);
+        margin-bottom: 40px;
+      }
+    }
+  }
+}

@@ -1,0 +1,103 @@
+@import 'src/assets/stylesheets/common.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+@import 'src/assets/stylesheets/animates.scss';
+@import 'src/assets/stylesheets/variables.scss';
+
+.button-default {
+  position: relative;
+  text-decoration: none;
+  @include button(null, 15px 40px, 25px, $sherpa-blue-1);
+  @include text(ProximaNova-Regular, 1.125rem, $white, null);
+
+  &.sign {
+    border-radius: 25px;
+    @include responsive(medium-desktop) {
+      min-width: 192px;
+    }
+  }
+  &.fluid {
+    @include button(100%, 20px 40px, 0, null);
+    @include multiple-responsive(small-mobile, mobile, small-tablet, tablet) {
+      padding: 15px 30px;
+    }
+  }
+  &.reload {
+    background-color: transparent;
+    color: $sherpa-blue-1;
+    padding-left: 0;
+    img {
+      width: 20px !important;
+      height: 20px !important;
+    }
+    span {
+      vertical-align: middle;
+    }
+    font-size: 16px;
+  }
+  &:disabled {
+    opacity: 0.8;
+    cursor: default;
+  }
+  @include multiple-responsive(small-mobile, mobile, small-tablet, tablet) {
+    padding: 12px 26px;
+  }
+  @include responsive(small-mobile) {
+    font-size: 0.875rem;
+  }
+  img {
+    display: none;
+  }
+  &.loading {
+    span {
+      opacity: 0;
+    }
+    img {
+      top: 50%;
+      left: 50%;
+      display: block;
+      position: absolute;
+      @include square(24px, null);
+      transform: translate(-50%, -50%);
+      @include rotate(2s linear infinite);
+    }
+  }
+  &.icon {
+    height: 50px;
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 28px;
+      height: 28px;
+      display: block;
+      margin-right: 5px;
+    }
+  }
+}
+
+.business-signup-modal-btn {
+  width: 180px;
+  height: 44px;
+  padding: 0px;
+}
+
+.business-button {
+  &--cancel {
+    padding: 0;
+    width: 145px;
+    height: 49px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: $white;
+    border: 1px solid #c4c4c4;
+    @include text(ProximaNova-Regular, 15px, $charcoal, null);
+  }
+  &--save {
+    padding: 0;
+    width: 145px;
+    height: 49px;
+    border-radius: 5px;
+    background-color: $chalky;
+    @include text(ProximaNova-Regular, 15px, #4f2108, null);
+  }
+}

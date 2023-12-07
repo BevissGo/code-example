@@ -1,0 +1,50 @@
+@import 'src/assets/stylesheets/variables.scss';
+$gray-border: #e6e6e6;
+
+.event-list__wrapper {
+  height: 100%;
+
+  .event-list {
+    background-color: white;
+    padding: 0 20px;
+    border-radius: 10px;
+    border: 1px solid $gray-border;
+    height: 100%;
+
+    .event-list__header {
+      border-bottom: 1px solid $gray-border;
+      padding: 20px 0;
+      display: flex;
+      align-items: stretch;
+
+      .title {
+        font-size: 24px;
+        font-weight: bold;
+        display: inline-block;
+        margin-right: auto;
+      }
+
+      .add-event {
+        align-items: center;
+        display: flex;
+        width: 25px;
+
+        * {
+          padding: 0;
+          width: 25px;
+          height: 25px;
+        }
+      }
+    }
+
+    .event-list__content {
+      padding: 20px 0 10px;
+      max-height: 300px;
+      overflow: auto;
+
+      .event {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}

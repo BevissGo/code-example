@@ -1,0 +1,25 @@
+@import 'src/assets/stylesheets/variables.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+
+.campaign-result-detail-modal {
+  &__header {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 28px;
+  }
+
+  &__name {
+    @include text(Montserrat-Bold, 1rem, $black, null);
+  }
+
+  &__email {
+    @include text(Montserrat-Regular, 0.875rem, $black, null);
+  }
+
+  &__test-list-result {
+    height: 70vh;
+    overflow: auto;
+    padding: 12px;
+  }
+}

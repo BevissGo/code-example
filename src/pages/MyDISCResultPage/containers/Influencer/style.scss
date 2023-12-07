@@ -1,0 +1,65 @@
+@import 'src/assets/stylesheets/variables.scss';
+@import 'src/assets/stylesheets/common.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+
+.influencer {
+    position: relative;
+    background-color: $white-smoke;
+    @include multiple-responsive(small-mobile, mobile) {
+      padding: 30px 15px 10px;
+    }
+    @include multiple-responsive(small-tablet, tablet) {
+      padding: 40px 38px 10px;
+    }
+    @include responsive(small-desktop) {
+      padding: 40px 56px 10px;
+    }
+    @include responsive(medium-desktop) {
+      padding: 50px 86px;
+    }
+    @include responsive(medium-middle-desktop) {
+      padding: 80px 135px;
+    }
+    &__summary {
+        &__intro {
+            padding-bottom: 50px;
+            width: calc(50% - 15px);
+            @include multiple-responsive(small-mobile, mobile, small-tablet) {
+                padding-bottom: 20px;
+                width: 100%;
+            }
+            &__title {
+                @include text(ProximaNova-Bold, 22px, $charcoal, null);
+                padding-bottom: 20px;
+            }
+            &__description {
+                @include text(ProximaNova-Regular, 18px, $charcoal, 30px);
+            }
+        }
+        &__list-example {
+            @include flex(null, null, space-between);
+            flex-wrap: wrap;
+            &__background {
+                width: calc(50% - 15px);
+                &.left {
+                    @include flex(null, null, flex-end);
+                }
+                @include multiple-responsive(small-mobile, mobile) {
+                    padding-bottom: 30px;
+                }
+                @include multiple-responsive(small-tablet, tablet, small-desktop) {
+                    padding-bottom: 40px;
+                }
+                @include multiple-responsive(small-mobile, mobile, small-tablet) {
+                    width: 100%;
+                }
+                @include responsive(medium-desktop) {
+                    padding-bottom: 50px;
+                }
+                @include responsive(medium-middle-desktop) {
+                    padding-bottom: 80px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,62 @@
+.weekday-filter__container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-right: 20px;
+
+  .weekday-filter {
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+
+    .anticon {
+      display: inline-block;
+    }
+
+    .weekday-filter__date {
+      display: inline-block;
+      white-space: nowrap;
+      margin: 0 20px;
+      vertical-align: middle;
+    }
+
+    svg {
+      :hover {
+        cursor: pointer;
+      }
+    }
+
+    &__range-calendar {
+      padding-left: 8px;
+      padding-right: 8px;
+
+      * {
+        font-family: ProximaNova-Regular;
+      }
+
+      .ant-picker-range-separator {
+        font-size: 1.25rem;
+      }
+
+      .ant-picker-input {
+        padding-left: 12px;
+
+        input {
+          font-size: 1rem;
+          font-family: ProximaNova-Regular;
+        }
+      }
+    }
+
+    &__switch-date-range-btn {
+      padding: 0 2px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+}

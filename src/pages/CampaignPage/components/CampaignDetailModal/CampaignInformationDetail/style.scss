@@ -1,0 +1,21 @@
+@import 'src/assets/stylesheets/variables.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+
+.campaign-information-detail {
+  padding: 16px 24px;
+  background-color: $white;
+  border-radius: 10px;
+
+  &__title {
+    @include text(Montserrat-Regular, 0.875rem, $black, null);
+    font-weight: 600;
+  }
+
+  &__content {
+    @include text(Montserrat-Regular, 0.875rem, $black, null);
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}

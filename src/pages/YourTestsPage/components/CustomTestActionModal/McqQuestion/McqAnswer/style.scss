@@ -1,0 +1,31 @@
+@import 'src/assets/stylesheets/variables.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+
+.mcq-answer {
+  &__radio-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  &__remove-answer-btn {
+    color: #fff;
+    background-color: #ff3f5b;
+
+    border-radius: 100%;
+  }
+
+  &__answer-index {
+    @include text(Montserrat-Bold, 1rem, $black, null);
+    margin-bottom: 8px;
+  }
+
+  &__correct-answer {
+    @include text(Montserrat-Regular, 0.875rem, $black, null);
+    padding: 4px 0;
+  }
+
+  &__add-answer-btn {
+    text-align: end;
+  }
+}

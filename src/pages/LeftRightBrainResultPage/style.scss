@@ -1,0 +1,79 @@
+@import 'src/assets/stylesheets/variables.scss';
+@import 'src/assets/stylesheets/common.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+
+.brain-result-page {
+  background: $romance;
+  position: relative;
+
+  &__title {
+    @include text(Georgia-Bold, 2.5rem, $charcoal, null);
+    text-align: center;
+    margin-bottom: 3rem;
+    @include multiple-responsive(small-mobile, mobile) {
+      padding-top: 82px;
+    }
+    @include multiple-responsive(small-tablet, tablet) {
+      padding-top: 109px;
+    }
+    @include responsive(small-desktop) {
+      padding-top: 149px;
+    }
+    @include responsive(medium-middle-desktop) {
+      padding-top: 159px;
+    }
+    @include responsive(large-desktop) {
+      padding-top: 169px;
+    }
+  }
+
+  &__content {
+    background-color: $pink;
+    margin: auto !important;
+    margin-bottom: 6rem !important;
+    width: 80%;
+    border-radius: 1.25rem;
+    padding-top: 5rem;
+    border: solid $pink-3 1px;
+    @include text(ProximaNova-Regular, 1.25rem, $charcoal, 20px);
+    @include multiple-responsive(small-mobile, mobile) {
+      flex-direction: column;
+      padding: 30px 20px;
+    }
+    @include multiple-responsive(small-tablet, tablet) {
+      flex-direction: column;
+      padding: 80px 20px;
+    }
+    @include responsive(small-desktop) {
+      padding: 80px 20px;
+    }
+    @include responsive(medium-desktop) {
+      padding: 80px 20px;
+    }
+    @include responsive(medium-middle-desktop) {
+      padding: 80px 30px;
+    }
+    @include responsive(large-desktop) {
+      padding: 80px 30px;
+    }
+
+    &__empty-iq-result {
+      @include text(ProximaNova-Regular, 1.5rem, $grey-1, null);
+      margin-top: 6rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    &__testNow {
+      @include text(ProximaNova-Regular, 1.5rem, $grey-1, null);
+      text-align: center;
+    }
+
+    button {
+      margin: auto;
+      margin-top: 4rem;
+      display: flex;
+      margin-bottom: 6rem;
+    }
+  }
+}

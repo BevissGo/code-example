@@ -1,0 +1,47 @@
+@import 'src/assets/stylesheets/variables.scss';
+@import 'src/assets/stylesheets/mixins.scss';
+
+.test-question-and-answer-list {
+  height: 50vh;
+  margin-top: 28px;
+  padding: 16px 20px;
+  overflow: auto;
+
+  border-radius: 10px;
+  background-color: $white;
+
+  &__wrapper {
+    margin: -30px 0;
+  }
+
+  &__question-group {
+    padding: 30px 0;
+
+    &:not(:first-child) {
+      border-top: 1px solid #eff0f4;
+    }
+  }
+
+  &__question-index {
+    @include text(Montserrat-Regular, 0.875rem, #363636, null);
+    font-weight: 600;
+  }
+
+  &__question {
+    @include text(Montserrat-Bold, 0.875rem, #363636, null);
+    margin-top: 8px;
+  }
+
+  &__answer-group {
+    margin-top: 12px;
+  }
+
+  &__answer {
+    @include text(Montserrat-Regular, 0.875rem, $black, null);
+
+    &--correct {
+      @include text(Montserrat-Regular, 0.875rem, $black, null);
+      font-weight: 600;
+    }
+  }
+}

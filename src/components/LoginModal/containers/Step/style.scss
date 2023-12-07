@@ -1,0 +1,78 @@
+@import "src/assets/stylesheets/common.scss";
+@import "src/assets/stylesheets/mixins.scss";
+@import "src/assets/stylesheets/variables.scss";
+
+.step {
+  display: flex;
+  @include multiple-responsive(small-mobile, mobile) {
+    flex-direction: column;
+  }
+  @include multiple-responsive(small-tablet, tablet) {
+    flex-direction: column;
+  }
+
+  &__content {
+    padding: 0rem 3.75rem;
+    @include multiple-responsive(small-mobile, mobile, small-tablet) {
+      padding: 0 20px;
+    }
+  }
+
+  &__title {
+    @include text(Georgia-Bold, 1.5rem, $charcoal, 2.625rem);
+    @include multiple-responsive(small-mobile, mobile, small-tablet) {
+      @include text(Georgia-Bold, 14px, $charcoal, 1.6rem);
+    }
+  }
+
+  &__description {
+    padding-top: 10px;
+    @include text(ProximaNova-Regular, 1.125rem, $charcoal, 1.875rem);
+
+    @include multiple-responsive(small-mobile, mobile, small-tablet) {
+      @include text(ProximaNova-Regular, 12px, $charcoal, 1.5rem);
+    }
+  }
+
+  &__action {
+    display: flex;
+    padding-top: 1.875rem;
+    flex-direction: column;
+    padding-bottom: 1.875rem;
+    justify-content: flex-start;
+    @include text(ProximaNova, 1rem, $charcoal, 1.6875rem);
+
+    @include multiple-responsive(small-mobile, mobile) {
+      @include text(ProximaNova, 12px, $charcoal, 1.5rem);
+      padding: 10px 0;
+      align-items: center;
+      flex-direction: column;
+    }
+    @include multiple-responsive(small-tablet, tablet) {
+      padding: 15px 0;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__img {
+    padding-right: 3.75rem;
+    @include multiple-responsive(small-mobile, mobile, small-tablet, tablet) {
+      padding-right: 0;
+      text-align: center;
+    }
+    
+    img {
+      height: 22rem;
+      padding-bottom: 2rem;
+      @include multiple-responsive(small-mobile, mobile) {
+        height: 10rem;
+        padding-bottom: 10px;
+      }
+      @include multiple-responsive(small-tablet, tablet) {
+        height: 15rem;
+        padding-bottom: 15px;
+      }
+    }
+  }
+}
